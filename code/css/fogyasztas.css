@@ -1,0 +1,21 @@
+#chartTitle{
+    text-align: center;
+}
+#pie-chart{
+    margin: auto;
+}
+#chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;      /* vagy ami neked kell */
+  margin: 0 auto;
+}
+
+#chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+#totalCal{
+    font-size: smaller;
+    text-align: center;
+}

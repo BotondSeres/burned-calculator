@@ -1,0 +1,746 @@
+[
+
+    {
+    "dataType": "metData",
+
+    "category": "Futás",
+
+    "elements": [
+
+        {
+
+        "id": 12020,
+
+        "name": "Futás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 7.5
+
+            },
+
+            {
+
+            "ilevel": "2",
+
+            "value": 8.5
+
+            },
+
+            {
+
+            "ilevel": "3",
+
+            "value": 10.5
+
+            },
+
+            {
+
+            "ilevel": "4",
+
+            "value": 12.0
+
+            }
+
+        ]
+
+        },
+
+        {
+
+        "id": 12170,
+
+        "name": "Lépcsőzés",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 15.0
+
+            }
+
+        ]
+
+        },
+        {
+
+        "id": 12186,
+
+        "name": "Pályafutás, 2000-3000m",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 19.3
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 12184,
+
+        "name": "Pályafutás, 500-1500m",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 18.0
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 12140,
+
+        "name": "Terepfutás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 9.3
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 12620,
+
+        "name": "Triatlon",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 13.0
+
+            }
+        ]
+
+        }     
+
+    ]
+
+    },
+    {
+
+    "category": "Házkörüli munka",
+
+    "elements": [
+
+        {
+
+        "id": 8019,
+
+        "name": "Fa aprítás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 4.5
+
+            }
+
+        ]
+
+        },
+        {
+
+        "id": 6127,
+
+        "name": "Házkörüli javítások",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 4.5
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 8050,
+
+        "name": "Ásás, kerti munkák",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 5.0
+
+            }
+        ]
+
+        }        
+    ]
+
+    },
+    {
+
+    "category": "Kajak & Kenu",
+
+    "elements": [
+
+        {
+
+        "id": 18040,
+
+        "name": "Versenyszintű evezés",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 2.8
+
+            },
+
+            {
+
+            "ilevel": "2",
+
+            "value": 5.8
+
+            },
+
+            {
+
+            "ilevel": "3",
+
+            "value": 12.5
+
+            },
+
+            {
+
+            "ilevel": "4",
+
+            "value": 13.5
+
+            }
+
+        ]
+
+        },
+        {
+
+        "id": 18020,
+
+        "name": "Túra Kenu",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 4.0
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 18100,
+
+        "name": "Túra Kajak",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 5.0
+
+            }
+        ]
+
+        }     
+
+    ]
+
+    },
+    {
+
+    "category": "Kűzdősport",
+
+    "elements": [
+
+        {
+
+        "id": 15730,
+
+        "name": "Birkózás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 6.0
+
+            }
+
+        ]
+
+        },
+        {
+
+        "id": 15100,
+
+        "name": "Boxolás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 12.3
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 15433,
+
+        "name": "Cselgáncs",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 11.3
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 15457,
+
+        "name": "Kickbox",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 7.3
+
+            }
+        ]
+
+        }   
+
+    ]
+
+    },
+    {
+
+    "category": "Labdajáték",
+
+    "elements": [
+
+        {
+
+        "id": 15350,
+
+        "name": "Jégkorong",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 7.8
+
+            }
+
+        ]
+
+        },
+        {
+
+        "id": 15040,
+
+        "name": "Kosárlabda",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 8.0
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 15320,
+
+        "name": "Kézilabda",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 12.0
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 15210,
+
+        "name": "Labdarúgás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 8.0
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 15710,
+
+        "name": "Röplabda",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 4.0
+
+            }
+        ]
+
+        }   
+
+    ]
+
+    },
+    {
+
+    "category": "Séta",
+
+    "elements": [
+
+        {
+
+        "id": 17220,
+
+        "name": "Gyaloglás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 5.5
+
+            }
+
+        ]
+
+        },
+        {
+
+        "id": 17082,
+
+        "name": "Túrázás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 5.3
+
+            }
+        ]
+
+        }
+
+    ]
+
+    },
+    {
+
+    "category": "Terem edzés",
+
+    "elements": [
+
+        {
+
+        "id": 2070,
+
+        "name": "Egométer",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 5.0
+
+            },
+
+            {
+
+            "ilevel": "2",
+
+            "value": 7.3
+
+            },
+
+            {
+
+            "ilevel": "3",
+
+            "value": 11.0
+
+            },
+
+            {
+
+            "ilevel": "4",
+
+            "value": 14.0
+
+            }
+
+        ]
+
+        },
+
+        {
+
+        "id": 2155,
+
+        "name": "Jóga",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 3.0
+
+            }
+
+        ]
+
+        },
+        {
+
+        "id": 2105,
+
+        "name": "Pilates",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 2.8
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 2032,
+
+        "name": "Saját testsúlyos edzés",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 3.5
+            },
+            {
+
+            "ilevel": "2",
+
+            "value": 6.0
+
+            },
+            {
+
+            "ilevel": "3",
+
+            "value": 7.5
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 15300,
+
+        "name": "Torna",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 3.8
+
+            }
+        ]
+
+        },
+        {
+
+        "id": 2068,
+
+        "name": "Ugrókötél",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 11.0
+
+            }
+        ]
+
+        }     
+
+    ]
+
+    },
+    {
+
+    "category": "Úszás",
+
+    "elements": [
+
+        {
+
+        "id": 18230,
+
+        "name": "Úszás",
+
+        "intensity": [
+
+            {
+
+            "ilevel": "1",
+
+            "value": 5.8
+
+            },
+
+            {
+
+            "ilevel": "2",
+
+            "value": 9.5
+
+            },
+
+            {
+
+            "ilevel": "3",
+
+            "value": 9.8
+
+            },
+
+            {
+
+            "ilevel": "4",
+
+            "value": 14.5
+
+            }
+
+        ]
+
+        }    
+
+    ]
+
+    }
+
+
+]

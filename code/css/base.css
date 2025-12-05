@@ -1,0 +1,80 @@
+/* #region Alap beállítások*/
+/* 1. Reset/globális */
+* { box-sizing: border-box; }
+
+/* 2. Saját színek, typography */
+:root {
+  --primary: #3498db;
+  --dark: #2c3e50;
+}
+
+/* 3. Bulma override (Bulma után töltődik be) */
+.navbar { background: var(--dark); }
+.button.is-primary { background: var(--primary); }
+/* #endregion*/
+
+
+.button .icon:last-child:not(:first-child).buttonIcon {
+  /*a .buttonIcon előtti rész a bulma szelektorja a gombon belüli ikonokra*/
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  /*ezzel visszarendeztem az öröklődött eltolódást középre*/
+  height: 2.5em;
+  width: 2.5em;
+  /* ezzel meg csak nagyobbá tettem őket*/
+}
+#workplaceActivity .button.is-selected, #sex .button.is-selected{
+  border: 2px solid #353535;
+  /* Szürkére színezés
+  --bulma-button-background-l-delta: var(--bulma-button-active-background-l-delta);
+  */
+}
+.sr-only {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+#startMinute {
+  max-width: 4rem;
+  text-align: center;
+}
+#startHour, #startMinute {
+  width: 3rem;        /* kb. 2 számjegy + egy kis hely */
+  text-align: center; /* számok középre */
+  padding-right: 0;   /* opcionális: kevesebb belső margó */
+  padding-left: 0;
+}
+/* Napi mozgás input slider stílus*/
+input[type="range"][list="intensity-ticks"] {
+  width: 100%;
+}
+
+/* a datalist opciókból csinálunk kis vonalakat a slider alatt */
+datalist#instensity-ticks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.4rem;
+}
+
+datalist#intensity-ticks option {
+  position: relative;
+  text-align: center;
+  opacity: 0%;
+}
+
+datalist#intensity-ticks option::before {
+  content: "";
+  position: absolute;
+  top: -0.4rem;
+  left: 50%;
+  width: 2px;
+  height: 8px;
+  transform: translateX(-50%);
+  background: #00c4a7; /* Bulma primary-ish */
+}
+footer.footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: auto
+}

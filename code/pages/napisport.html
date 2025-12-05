@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napi sport bevitel</title>
+    <script type="module" src="../js/napisport.js" defer></script>
+    <link rel="stylesheet" href="../css\bulma\css\bulma.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <script type="module" src="../js/alapadatok.js" defer></script>
+    <script type="module" src="../js/fetching.js" async></script>
+</head>
+<body>
+ <!-- #region Hero -->
+        <section class="hero is-dark is-medium">
+            <!-- Hero head: will stick at the top -->
+            <div class="hero-head">
+                <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../home.html">
+                            <img src="https://placehold.co/460x120" alt="Logo" />
+                        </a>
+                       <span class="navbar-burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a id="alapAdatok" class="navbar-item"> Alap Adatok </a>
+                            <a class="navbar-item" href="./altalanos.html"> Általános Számítások </a>
+                            <a class="navbar-item is-active" href="#"> Napi Mozgás </a>
+                            <a class="navbar-item"> Napi Számítások </a>
+
+                        </div>
+                    </div>
+                </div>
+                </nav>
+            </div>
+
+            <!-- #region: Hero content -->
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                <p class="title">Mai mozgás rögzítése</p>
+                <p class="subtitle">Állítsd be a megfelelő paramétereket a kártyán, majd mentéssel rögzítsd a mozgásod!<br>A táblázatban meg fog jelenni ezután. Innen törölheted is.</p>
+                </div>
+            </div>
+            <!--#endregion-->
+
+            <!-- #region Hero footer -->
+            <div class="hero-foot">
+                <nav class="breadcrumb has-arrow-separator pb-2 is-centered" aria-label="breadcrumbs">
+                <ul>
+                    <li><a id="brModal" href="#">Alap Adatok</a></li>
+                    <li><a href="./altalanos.html">Általános Számítások</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Napi Mozgás</a></li>
+                    <li><a href="#">Teljes Energiafogyasztás</a></li>
+                </ul>
+                </nav>
+            </div>
+            <!--#endregion-->
+        </section>
+        
+    <!-- #endregion -->
+<section class="hero is-dark">
+<!--#region Elso kartya-->
+
+
+<div class="card mx-6  my-4 ">
+    <div class="card-content">
+        <div class="form">
+            <div class="columns is-vcentered">
+                <div class="column is-narrow">
+                    <div class="field is-grouped">
+                        <!-- #region Dropdown Category-->
+                        <div id="kategoriaDropdownActive" class="dropdown">
+                            
+                            <div class="dropdown-trigger">
+                                <button id="kategoriaDropdown" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                                <span id="chosenCategory">Kategória</span>
+                                <i class="material-icons">arrow_drop_down</i>
+                                </button>
+                                <div class="dropdown-menu" id="category_dropdown-menu" role="menu"></div>               
+                            </div>
+                        </div>
+                        <!--#endregion-->
+                        <!-- #region Dropdown Activity-->
+                        <div id="activityDropdownActive" class="dropdown">
+                            <div class="dropdown-trigger">
+                                <button id="activityDropdown" class="button " aria-haspopup="true" aria-controls="dropdown-menu3" disabled>
+                                <span id="chosenActivity">Mozgás</span>
+                                <i class="material-icons">arrow_drop_down</i>
+                                
+                                </button>
+                                <div class="dropdown-menu" id="activity_dropdown-menu" role="menu"></div>               
+                            </div>
+                        </div>
+                        <!--#endregion-->
+                    </div>
+                </div>
+            
+            <!-- #region Time Range-->
+            <div class="column is-flex is-justify-content-flex-end">
+                <div class="columns">
+                    <div class="field is-grouped">
+                    <div class="column">
+                        <label class="label mr-2 " id="starTime">Kezdés</label>
+                        <div class="field has-addons">
+                            <div class="control">
+                            <input
+                                id="startHour"
+                                class="input time-input"
+                                type="number"
+                                min="0"
+                                max="23"
+                                placeholder="00">
+                            </div>
+
+                            <div class="control">
+                            <a class="button is-static">:</a>
+                            </div>
+
+                            <div class="control">
+                            <input
+                                id="startMinute"
+                                class="input time-input"
+                                type="number"
+                                min="0"
+                                max="59"
+                                placeholder="00">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="column">
+                        <!--<div class="field">-->
+                            <label class="label mr-2 " id="endTime">Befejezés</label>
+                        <div class="field has-addons">
+                            <div class="control">
+                            <input
+                                id="endHour"
+                                class="input time-input"
+                                type="number"
+                                min="0"
+                                max="23"
+                                placeholder="00">
+                            </div>
+
+                            <div class="control">
+                            <a class="button is-static">:</a>
+                            </div>
+
+                            <div class="control">
+                            <input
+                                id="endMinute"
+                                class="input time-input"
+                                type="number"
+                                min="0"
+                                max="59"
+                                placeholder="00">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <label class="label" id="intensityLabel">Intenzitás Skála</label>
+            <div class="field">
+                <div class="control">
+                    <input
+                    id="intensitySlider"
+                    class="slider is-fullwidth has-output-tooltip"
+                    step="33"
+                    min="0"
+                    max="99"
+                    value="0"
+                    type="range"
+                    list="intensity-ticks">
+                </div>
+                </div>
+                <datalist id="intensity-ticks">
+                <option value="0"></option>
+                <option value="33"></option>
+                <option value="66"></option>
+                <option value="100"></option>
+                </datalist>
+            <div class="control">
+            <button id="sportSubmit" class="button is-primary">Rögzítés</button>
+            </div>
+            
+        </div>
+        </div>    
+    </div>
+</div>
+<!--#endregion-->
+
+</section>
+
+<section class="hero is-dark">
+<!--#region Tablazat kartya-->
+
+
+<div class="card mx-6  my-4 ">
+    <div class="card-content">
+          <table class="table is-fullwidth is-striped is-hoverable">
+            <thead>
+                <tr>
+                <th>Sorrendje</th>
+                <th>Mozgásforma</th>
+                <th>Kezdés</th>
+                <th>Vége</th>
+                <th>Törlés<th>
+                </tr>
+            </thead>
+            <tbody id="activityTableBody">
+                <tr>
+                    <th>idx</th>
+                    <td>actName</td>
+                    <td>HH:MM</td>
+                    <td>HH:MM</td>
+                    <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
+                </tr>
+                <tr>
+                    <th>idx</th>
+                    <td>actName</td>
+                    <td>HH:MM</td>
+                    <td>HH:MM</td>
+                    <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
+                </tr>
+                <tr>
+                    <th>idx</th>
+                    <td>actName</td>
+                    <td>HH:MM</td>
+                    <td>HH:MM</td>
+                    <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+</section>
+<!--#endregion-->
+</section>
+<section class="hero is-dark">
+    <div class="control mx-auto mb-3">
+        <button class="button mr-1 is-danger" onclick="window.location.href='altalanos.html'">Előző</button>
+        <button class="button ml-1 is-success" onclick="window.location.href='fogyasztas.html'">Következő</button>
+    </div>
+</section>
+<!--#region Footer-->
+<footer class="footer is-dark">
+    <div class="content has-text-centered">
+        <p><strong>Bruned Kalkulátor</strong></p>
+        <p>Készítette: Seres Botond</p>
+        <p> Source kód: <a href="">link</a></p>
+    </div>
+</footer>
+<!--#endregion-->
+
+<!-- #####\/ Modal Template #####\/-->
+<!-- #region Modal -->
+<div id="alapAdatokModal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Alap Adatok</p>
+            <button class="delete" aria-label="close" id="closeModal"></button>
+        </header>
+        <section class="modal-card-body">
+            <form id="profileForm">
+                <!--#region Nem-->
+                <div class="field">
+                    <label class="label">Nem</label>
+                    <div id="sex" class="control is-expanded">
+                        <div class="buttons has-addons">
+                            <label id="sexl0" class="button is-medium is-light" data-value="0">
+                                <input id="sex0" class="sexButton sr-only" type="radio" name="sexRadio" value="0" required >
+                                <img class="icon buttonIcon" src="../../assets/img/baseDataForm/woman.png" alt="Nő">
+                            </label>
+                            <label id="sexl1" class="button is-medium is-light" data-value="1">
+                                <input id="sex1" class="sexButton sr-only" type="radio" name="sexRadio" value="1" >
+                                <img class="icon buttonIcon" src="../../assets/img/baseDataForm/man.png" alt="Férfi">
+                            </label>
+                        </div>
+                    </div>
+                    <!--#endregion-->
+                    <!-- #region Születési év -->
+                    <div class="field">
+                        <label class="label">Életkor</label>
+                        <div class="control">
+                            <input
+                            class="input"
+                            type="number"
+                            id="AgeInput"
+                            name="Age"
+                            min="10"
+                            max="110" 
+                            step="1"
+                            placeholder="Add meg az életkorod"
+                            required>
+                        </div>
+                    </div>
+                    <!--#endregion-->
+                    <!-- #region Magasság -->
+                    <div class="field">
+                        <label class="label">Magasság</label>
+                        <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input
+                            class="input"
+                            type="number"
+                            id="heightInput"
+                            name="height"
+                            min="100"
+                            max="250"
+                            step="1"
+                            placeholder="Add meg a magasságod"
+                            required>
+                        </div>
+                        <div class="control">
+                            <a class="button is-static">cm</a>
+                        </div>
+                    </div>
+                </div>
+                <!--#endregion-->
+                <!-- #region Testsúly -->
+                <div class="field">
+                    <label class="label">Testsúly</label>
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input
+                            class="input"
+                            type="number"
+                            id="weightInput"
+                            name="weight"
+                            min="20"
+                            max="150"
+                            step="1"
+                            placeholder="Add meg a testsúlyod"
+                            required>
+                        </div>
+                        <div class="control">
+                            <a class="button is-static">kg</a>
+                        </div>
+                    </div>
+                </div>
+                <!--#endregion-->
+                <!--#region Munkahelyi tevékenység -->
+                <div class="field">
+                    <label class="label">Munkahelyi aktivitás</label>
+                    <div id="workplaceActivity" class="control is-expanded">
+                        <div class="buttons has-addons">
+                            <label id="wal0" class="button is-medium is-light" data-value="0">
+                                <input id="wa0" class="WAButton sr-only" type="radio" name="workplaceRadio" value="0" required >
+                                <img class="icon buttonIcon" src="../../assets/img/baseDataForm/1.png" alt="Irodai munka">
+                            </label>
+                            <label id="wal1" class="button is-medium is-light" data-value="1">
+                                <input id="wa1" class="WAButton sr-only" type="radio" name="workplaceRadio" value="1" >
+                                <img class="icon buttonIcon" src="../../assets/img/baseDataForm/2.png" alt="Könnyű fizikai munka">
+                            </label>
+                            <label id="wal2" class="button is-medium is-light" data-value="2">
+                                <input id="wa2" class="WAButton sr-only" type="radio" name="workplaceRadio" value="2" >
+                                <img class="icon buttonIcon" src="../../assets/img/baseDataForm/3.png" alt="Általános fizikai munka">
+                            </label>
+                            <label id="wal3" class="button is-medium is-light" data-value="3">
+                                <input id="wa3" class="WAButton sr-only" type="radio" name="workplaceRadio" value="3" >
+                                <img class="icon buttonIcon" src="../../assets/img/baseDataForm/4.png" alt="Nehéz fizikai munka">
+                            </label>
+                        </div>
+                    </div>
+                    <p id="WAhelp" class="help"></p>
+                </div>
+                <!--#endregion-->
+                
+            </form>
+            
+        </section>
+        <footer class="modal-card-foot">
+            <button id="profileModalSave" type="submit" form="profileForm" class="button is-success">Mentés</button>
+            <button class="button" id="cancelModal">Mégse</button>
+        </footer>
+    </div>
+</div>
+<!-- #endregion -->
+</body>
+</html>
