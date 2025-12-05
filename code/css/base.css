@@ -78,3 +78,17 @@ footer.footer{
   flex-direction: column;
   margin-top: auto
 }
+section.salesText{
+  padding-top: 3rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+div.hero-foot{
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 2rem;
+}
+#startButton{
+  padding-top: 2rem;
+  text-align: center;
+}

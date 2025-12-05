@@ -134,21 +134,21 @@ saveButton.addEventListener('click', (e) => {
     let hiba = [];
     if(!(/^([1-9][0-9]*)$/.test(age.value))) // csak számok, nem kezdődik 0-val
     {
-      hiba.push("Helytelenül életkor formátum!");
+      hiba.push("Helytelenül megadott életkor formátum!");
       console.log("Regex életkor Hiba!");  
     }else if(age.value < 10 || age.value > 105){
         hiba.push("Életkor csak 10 és 105 év között engedélyezett.");
       }
     if(!(/^([1-9][0-9]*)$/.test(height.value))) // csak számok, nem kezdődik 0-val
     {
-      hiba.push("Helytelenül magasság formátum!");
+      hiba.push("Helytelenül megadott magasság formátum!");
       console.log("Regex magasság Hiba!");
     }else if(height.value < 100 || height.value > 205){
       hiba.push("Magasság csak 100cm és 205cm között engedélyezett.");
     }
     if(!(/^([1-9][0-9]*)$/.test(weight.value))) // csak számok, nem kezdődik 0-val
     {
-      hiba.push("Helytelenül tesúly formátum!");
+      hiba.push("Helytelenül megadott tesúly formátum!");
       console.log("Regex testsúly Hiba!");
     }else if(weight.value < 20 || weight.value > 150){
       hiba.push("Testsúly csak 20 és 150 kg között engedélyezett.");
