@@ -2,7 +2,7 @@
 // Load MET sports data
 import { saveToLocalStorage } from './localStorage.js';
 
-const metJsonPath = '../../code/data/metSports.json';
+const metJsonPath = '/code/data/metSports.json';
 
 async function fetchMetSports(){
     if (localStorage.getItem("metData") == null){
