@@ -7,12 +7,8 @@
     <meta name="author" content="Botond Seres">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Code -->
-    <link rel="stylesheet" href="../css\bulma\css\bulma.css">
+    <link rel="stylesheet" href="./code/css/bulma/css/bulma.css">
     <link rel="stylesheet" href="../css/style.css">
-    <!--Chart.js script a body aljan, mert nem működik defer-rel-->
-    <script type="module" src="../js/alapadatok.js" defer></script>
-    <script type="module" src="../js/fetching.js" async></script>
-    <script type="module" src="../js/fogyasztas.js" defer></script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
@@ -22,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Ikonok -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!---------->
+
     <title>Mai energiafogyasztás</title>
 </head>
 <body>
@@ -34,7 +30,7 @@
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item" href="../../index.html">
-                            <img src="/burned-calculator/assets/img/logo.png" alt="Logo" />
+                            <img src="/burned-calculator/assets/img/logo.png" alt="Logo">
                         </a>
                         <span class="navbar-burger" data-target="navbarMenuHeroA">
                             <span></span>
@@ -74,51 +70,51 @@
                     <li><a href="./napisport.html">Napi Mozgás</a></li>
                     <li class="is-active"><a href="#" aria-current="page">Teljes Energiafogyasztás</a></li>
                 </ul>
-                </nav>
-            </div>
-        </section>
-        <!--#endregion-->
-        
-        <!--#region Elso kartya-->
-        
-        <section class="hero is-dark">
-            <div class="card mx-6  my-4 ">
-                <div id="chartCard" class="card-content">
-                    <h1 id="chartTitle">Napi energiafogyasztás megoszlása</h1>
-                    <h2 id="totalCal">A mai nap elégetett kalória: </h2>
-                    <div id="chart-container" class="container pt-4">
-                        <canvas id="pie-chart"></canvas>
-                    </div>
+            </nav>
+        </div>
+    </section>
+    <!--#endregion-->
+    
+    <!--#region Elso kartya-->
+    
+    <section class="hero is-dark">
+        <div class="card mx-6  my-4 ">
+            <div id="chartCard" class="card-content">
+                <h1 id="chartTitle">Napi energiafogyasztás megoszlása</h1>
+                <h2 id="totalCal">A mai nap elégetett kalória: </h2>
+                <div id="chart-container" class="container pt-4">
+                    <canvas id="pie-chart"></canvas>
                 </div>
             </div>
-            <!--#endregion-->
+        </div>
+        <!--#endregion-->
             
-        </section>
-        <section class="hero is-dark">
-            <div class="control mx-auto mb-3">
-                <button class="button mr-1 is-danger" onclick="window.location.href='napisport.html'">Előző</button>
-            </div>
-        </section>
-        
-        
-<!--#region Footer-->
-<footer class="footer is-dark">
-    <div class="content has-text-centered">
-        <p><b id="footertitle">Bruned Kalkulátor</b></p>
-        <p> Source kód: <a href="https://github.com/BotondSeres/burned-calculator">link</a></p>
-    </div>
-</footer>
-<!--#endregion-->
-
-<!-- #####\/ Modal Template #####\/-->
-<!-- #region Modal -->
-<div id="alapAdatokModal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Alap Adatok</p>
-            <button class="delete" aria-label="close" id="closeModal"></button>
-        </header>
+    </section>
+    <section class="hero is-dark">
+        <div class="control mx-auto mb-3">
+            <button class="button mr-1 is-danger" onclick="window.location.href='napisport.html'">Előző</button>
+        </div>
+    </section>
+    
+    
+    <!--#region Footer-->
+    <footer class="footer is-dark">
+        <div class="content has-text-centered">
+            <p><b id="footertitle">Bruned Kalkulátor</b></p>
+            <p> Source kód: <a href="https://github.com/BotondSeres/burned-calculator">link</a></p>
+        </div>
+    </footer>
+    <!--#endregion-->
+    
+    <!-- #####\/ Modal Template #####\/-->
+    <!-- #region Modal -->
+    <div id="alapAdatokModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Alap Adatok</p>
+                <button class="delete" aria-label="close" id="closeModal"></button>
+            </header>
         <section class="modal-card-body">
             <form id="profileForm">
                 <!--#region Nem-->
@@ -136,6 +132,7 @@
                             </label>
                         </div>
                     </div>
+                </div>
                     <!--#endregion-->
                     <!-- #region Születési év -->
                     <div class="field">
@@ -158,17 +155,17 @@
                     <div class="field">
                         <label class="label">Magasság</label>
                         <div class="field has-addons">
-                        <div class="control is-expanded">
-                            <input
-                            class="input"
-                            type="number"
-                            id="heightInput"
-                            name="height"
-                            min="100"
-                            max="250"
-                            step="1"
-                            placeholder="Add meg a magasságod"
-                            required>
+                            <div class="control is-expanded">
+                                <input
+                                class="input"
+                                type="number"
+                                id="heightInput"
+                                name="height"
+                                min="100"
+                                max="250"
+                                step="1"
+                                placeholder="Add meg a magasságod"
+                                required>
                         </div>
                         <div class="control">
                             <a class="button is-static">cm</a>
@@ -236,7 +233,8 @@
 </div>
 <!-- #endregion -->
 <script src="../js/Chart.js/chart.umd.min.js"></script>
-
-
+<script type="module" src="../js/alapadatok.js"></script>
+<script type="module" src="../js/fetching.js" async></script>
+<script type="module" src="../js/fogyasztas.js"></script>
 </body>
 </html>

@@ -7,11 +7,8 @@
     <meta name="author" content="Botond Seres">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Code -->
-    <link rel="stylesheet" href="../css\bulma\css\bulma.css">
+    <link rel="stylesheet" href="./code/css/bulma/css/bulma.css">
     <link rel="stylesheet" href="../css/style.css">
-    <script type="module" src="../js/alapadatok.js" defer></script>
-    <script type="module" src="../js/fetching.js" async></script>
-    <script type="module" src="../js/altalanos.js" defer></script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
@@ -21,21 +18,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Ikonok -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!---------->
     <title>Általános Számítások</title>
 </head>
 <body>
- <!-- #region Hero -->
-        <section class="hero is-dark is-medium">
-            <!-- Hero head: will stick at the top -->
-            <div class="hero-head">
-                <nav class="navbar">
+    <!-- #region Hero -->
+    <section class="hero is-dark is-medium">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item" href="../../index.html">
-                            <img src="/burned-calculator/assets/img/logo.png" alt="Logo" />
+                            <img src="/burned-calculator/assets/img/logo.png" alt="Logo">
                         </a>
-                       <span class="navbar-burger" data-target="navbarMenuHeroA">
+                        <span class="navbar-burger" data-target="navbarMenuHeroA">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -48,66 +44,66 @@
                             <a class="navbar-item is-active" href="#"> Általános Számítások </a>
                             <a class="navbar-item" href="./napisport.html"> Napi Mozgás </a>
                             <a class="navbar-item" href="./fogyasztas.html"> Napi Energiafogyasztás </a>
-
+                            
                         </div>
                     </div>
                 </div>
-                </nav>
-            </div>
-
-            <!-- #region: Hero content -->
-            <div class="hero-body">
-                <div class="container has-text-centered">
+            </nav>
+        </div>
+        
+        <!-- #region: Hero content -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
                 <p class="title is-size-4-mobile is-size-3-tablet is-size-2-desktop">Általános Számítások</p>
                 <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">Néhány alapvető számítás, amelyek jellemzik az általános egészségi állapotod!</p>
                 </div>
             </div>
             <!--#endregion-->
-
+            
             <!-- #region Hero footer -->
             <div class="hero-foot">
                 <nav class="breadcrumb has-arrow-separator pb-2 is-centered" aria-label="breadcrumbs">
-                <ul>
-                    <li><a id="brModal" href="#">Alap Adatok</a></li>
-                    <li class="is-active"><a href="#" aria-current="page">Általános Számítások</a></li>
-                    <li><a href="./napisport.html" >Napi Mozgás</a></li>
-                    <li><a href="./fogyasztas.html">Teljes Energiafogyasztás</a></li>
-                </ul>
+                    <ul>
+                        <li><a id="brModal" href="#">Alap Adatok</a></li>
+                        <li class="is-active"><a href="#" aria-current="page">Általános Számítások</a></li>
+                        <li><a href="./napisport.html" >Napi Mozgás</a></li>
+                        <li><a href="./fogyasztas.html">Teljes Energiafogyasztás</a></li>
+                    </ul>
                 </nav>
             </div>
             <!--#endregion-->
         </section>
         
-<!--#region Elso kartya-->
-
-<section class="hero is-dark">
-<div id="resultsCard" class="card mx-6  my-4 ">
-    <div class="card-content">
-        <table class="table mx-auto result-table">
-            <tbody>
-                <tr>
-                <th class="is-size-7-mobile">BMI</th>
-                <td id="bmiOutput" class="is-size-7-mobile">00,0</td>
-                </tr>
-                <tr>
-                <th class="is-size-7-mobile">Ideális Testsúly (Hamwi formula)</th>
-                <td id="hamwiOutput" class="is-size-7-mobile">00 kg</td>
-                </tr>
-                <tr>
-                <th class="is-size-7-mobile">Ideális Testsúly Tartomány</th>
-                <td id="idealWeightOutput" class="is-size-7-mobile">00-00 kg</td>
-                </tr>
-                <tr>
-                <th class="is-size-7-mobile">Bazális Anyagcsere</th>
-                <td id="rmrOutput" class="is-size-7-mobile">0000 Kcal</td>
-                </tr>
+        <!--#region Elso kartya-->
+        
+        <section class="hero is-dark">
+            <div id="resultsCard" class="card mx-6  my-4 ">
+                <div class="card-content">
+                    <table class="table mx-auto result-table">
+                        <tbody>
+                            <tr>
+                                <th class="is-size-7-mobile">BMI</th>
+                                <td id="bmiOutput" class="is-size-7-mobile">00,0</td>
+                            </tr>
+                            <tr>
+                                <th class="is-size-7-mobile">Ideális Testsúly (Hamwi formula)</th>
+                                <td id="hamwiOutput" class="is-size-7-mobile">00 kg</td>
+                            </tr>
+                            <tr>
+                                <th class="is-size-7-mobile">Ideális Testsúly Tartomány</th>
+                                <td id="idealWeightOutput" class="is-size-7-mobile">00-00 kg</td>
+                            </tr>
+                            <tr>
+                                <th class="is-size-7-mobile">Bazális Anyagcsere</th>
+                                <td id="rmrOutput" class="is-size-7-mobile">0000 Kcal</td>
+                            </tr>
                 <tr>
                 <th class="is-size-7-mobile">Napi minimum kalória igény (Csak munka, nincs sport)</th>
                 <td id="energyExpOutput" class="is-size-7-mobile">0000 Kcal</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+            </tr>
+        </tbody>
+    </table>
+</div>
 </div>
 <!--#endregion-->
 
@@ -155,6 +151,7 @@
                             </label>
                         </div>
                     </div>
+                </div>
                     <!--#endregion-->
                     <!-- #region Születési év -->
                     <div class="field">
@@ -177,23 +174,23 @@
                     <div class="field">
                         <label class="label">Magasság</label>
                         <div class="field has-addons">
-                        <div class="control is-expanded">
-                            <input
-                            class="input"
-                            type="number"
-                            id="heightInput"
-                            name="height"
-                            min="100"
-                            max="250"
-                            step="1"
-                            placeholder="Add meg a magasságod"
-                            required>
-                        </div>
-                        <div class="control">
-                            <a class="button is-static">cm</a>
+                            <div class="control is-expanded">
+                                <input
+                                class="input"
+                                type="number"
+                                id="heightInput"
+                                name="height"
+                                min="100"
+                                max="250"
+                                step="1"
+                                placeholder="Add meg a magasságod"
+                                required>
+                            </div>
+                            <div class="control">
+                                <a class="button is-static">cm</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <!--#endregion-->
                 <!-- #region Testsúly -->
                 <div class="field">
@@ -255,5 +252,8 @@
 </div>
 <!-- #endregion -->
 
+<script type="module" src="../js/alapadatok.js"></script>
+<script type="module" src="../js/fetching.js" async></script>
+<script type="module" src="../js/altalanos.js"></script>
 </body>
 </html>

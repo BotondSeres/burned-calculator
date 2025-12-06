@@ -7,11 +7,8 @@
     <meta name="author" content="Botond Seres">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Code -->
-    <link rel="stylesheet" href="../css\bulma\css\bulma.css">
+    <link rel="stylesheet" href="./code/css/bulma/css/bulma.css">
     <link rel="stylesheet" href="../css/style.css">
-    <script type="module" src="../js/alapadatok.js" defer></script>
-    <script type="module" src="../js/fetching.js" async></script>
-    <script type="module" src="../js/napisport.js" defer></script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
@@ -21,21 +18,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Ikonok -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!---------->
     <title>Napi sport bevitel</title>
 </head>
 <body>
- <!-- #region Hero -->
-        <section class="hero is-dark is-medium">
-            <!-- Hero head: will stick at the top -->
-            <div class="hero-head">
-                <nav class="navbar">
+    <!-- #region Hero -->
+    <section class="hero is-dark is-medium">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item" href="../../index.html">
-                            <img src="/burned-calculator/assets/img/logo.png" alt="Logo" />
+                            <img src="/burned-calculator/assets/img/logo.png" alt="Logo">
                         </a>
-                       <span class="navbar-burger" data-target="navbarMenuHeroA">
+                        <span class="navbar-burger" data-target="navbarMenuHeroA">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -48,64 +44,64 @@
                             <a class="navbar-item" href="./altalanos.html"> Általános Számítások </a>
                             <a class="navbar-item is-active" href="#"> Napi Mozgás </a>
                             <a class="navbar-item" href="./fogyasztas.html"> Napi Számítások </a>
-
+                            
                         </div>
                     </div>
                 </div>
-                </nav>
-            </div>
-
-            <!-- #region: Hero content -->
-            <div class="hero-body">
-                <div class="container has-text-centered">
+            </nav>
+        </div>
+        
+        <!-- #region: Hero content -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
                 <p class="title is-size-4-mobile is-size-3-tablet is-size-2-desktop">Mai mozgás rögzítése</p>
                 <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">Állítsd be a megfelelő paramétereket a kártyán, majd mentéssel rögzítsd a mozgásod!<br>A táblázatban meg fog jelenni ezután. Innen törölheted is.</p>
-                </div>
             </div>
-            <!--#endregion-->
-
-            <!-- #region Hero footer -->
-            <div class="hero-foot">
-                <nav class="breadcrumb has-arrow-separator pb-2 is-centered" aria-label="breadcrumbs">
+        </div>
+        <!--#endregion-->
+        
+        <!-- #region Hero footer -->
+        <div class="hero-foot">
+            <nav class="breadcrumb has-arrow-separator pb-2 is-centered" aria-label="breadcrumbs">
                 <ul>
                     <li><a id="brModal" href="#" class="is-size-6-mobile is-size-5-tablet is-size-4-desktop">Alap Adatok</a></li>
                     <li><a href="./altalanos.html" class="is-size-6-mobile is-size-5-tablet is-size-4-desktop">Általános Számítások</a></li>
                     <li class="is-active"><a href="#" aria-current="page" class="is-size-6-mobile is-size-5-tablet is-size-4-desktop">Napi Mozgás</a></li>
                     <li><a href="./fogyasztas.html" class="is-size-6-mobile is-size-5-tablet is-size-4-desktop">Teljes Energiafogyasztás</a></li>
                 </ul>
-                </nav>
-            </div>
-            <!--#endregion-->
-        </section>
-        
+            </nav>
+        </div>
+        <!--#endregion-->
+    </section>
+    
     <!-- #endregion -->
-<!--#region Elso kartya-->
-<section class="hero is-dark">
-<div class="card mx-6  my-4 ">
-    <div class="card-content">
-        <div class="form">
-            <div class="columns is-vcentered">
-                <div class="column is-narrow">
-                    <div class="field is-grouped">
-                        <!-- #region Dropdown Category-->
-                        <div id="kategoriaDropdownActive" class="dropdown">
-                            
-                            <div class="dropdown-trigger">
-                                <button id="kategoriaDropdown" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+    <!--#region Elso kartya-->
+    <section class="hero is-dark">
+        <div class="card mx-6  my-4 ">
+            <div class="card-content">
+                <div class="form">
+                    <div class="columns is-vcentered">
+                        <div class="column is-narrow">
+                            <div class="field is-grouped">
+                                <!-- #region Dropdown Category-->
+                                <div id="kategoriaDropdownActive" class="dropdown">
+                                    
+                                    <div class="dropdown-trigger">
+                                <button id="kategoriaDropdown" class="button" aria-haspopup="true">
                                 <span id="chosenCategory">Kategória</span>
                                 <i class="material-icons">arrow_drop_down</i>
-                                </button>
-                                <div class="dropdown-menu" id="category_dropdown-menu" role="menu"></div>               
-                            </div>
+                            </button>
+                            <div class="dropdown-menu" id="category_dropdown-menu" role="menu"></div>               
+                        </div>
                         </div>
                         <!--#endregion-->
                         <!-- #region Dropdown Activity-->
                         <div id="activityDropdownActive" class="dropdown">
                             <div class="dropdown-trigger">
-                                <button id="activityDropdown" class="button " aria-haspopup="true" aria-controls="dropdown-menu3" disabled>
-                                <span id="chosenActivity" class="is-size-7-mobile">Mozgás</span>
-                                <i class="material-icons">arrow_drop_down</i>
-                                
+                                <button id="activityDropdown" class="button " aria-haspopup="true" disabled>
+                                    <span id="chosenActivity" class="is-size-7-mobile">Mozgás</span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                    
                                 </button>
                                 <div class="dropdown-menu" id="activity_dropdown-menu" role="menu"></div>               
                             </div>
@@ -113,33 +109,33 @@
                         <!--#endregion-->
                     </div>
                 </div>
-            
-            <!-- #region Time Range-->
-            <div class="column is-flex is-justify-content-flex-end">
-                <div class="columns">
-                    <div class="field is-grouped">
-                    <div class="column">
-                        <label class="label mr-2 " id="starTime">Kezdés</label>
-                        <div class="field has-addons">
-                            <div class="control">
-                            <input
-                                id="startHour"
-                                class="input time-input"
-                                type="number"
-                                min="0"
-                                max="23"
-                                placeholder="00">
-                            </div>
-
-                            <div class="control">
-                            <a class="button is-static is-hidden-mobile">:</a>
-                            </div>
-
-                            <div class="control">
-                            <input
-                                id="startMinute"
-                                class="input time-input"
-                                type="number"
+                
+                <!-- #region Time Range-->
+                <div class="column is-flex is-justify-content-flex-end">
+                    <div class="columns">
+                        <div class="field is-grouped">
+                            <div class="column">
+                                <label class="label mr-2 " id="starTime">Kezdés</label>
+                                <div class="field has-addons">
+                                    <div class="control">
+                                        <input
+                                        id="startHour"
+                                        class="input time-input"
+                                        type="number"
+                                        min="0"
+                                        max="23"
+                                        placeholder="00">
+                                    </div>
+                                    
+                                    <div class="control">
+                                        <a class="button is-static is-hidden-mobile">:</a>
+                                    </div>
+                                    
+                                    <div class="control">
+                                        <input
+                                        id="startMinute"
+                                        class="input time-input"
+                                        type="number"
                                 min="0"
                                 max="59"
                                 placeholder="00">
@@ -151,41 +147,41 @@
                     <div class="column">
                         <!--<div class="field">-->
                             <label class="label mr-2 " id="endTime">Befejezés</label>
-                        <div class="field has-addons">
-                            <div class="control">
-                            <input
-                                id="endHour"
-                                class="input time-input"
-                                type="number"
-                                min="0"
-                                max="23"
-                                placeholder="00">
+                            <div class="field has-addons">
+                                <div class="control">
+                                    <input
+                                    id="endHour"
+                                    class="input time-input"
+                                    type="number"
+                                    min="0"
+                                    max="23"
+                                    placeholder="00">
+                                </div>
+                                
+                                <div class="control">
+                                    <a class="button is-static is-hidden-mobile">:</a>
+                                </div>
+                                
+                                <div class="control">
+                                    <input
+                                    id="endMinute"
+                                    class="input time-input"
+                                    type="number"
+                                    min="0"
+                                    max="59"
+                                    placeholder="00">
+                                </div>
                             </div>
-
-                            <div class="control">
-                            <a class="button is-static is-hidden-mobile">:</a>
-                            </div>
-
-                            <div class="control">
-                            <input
-                                id="endMinute"
-                                class="input time-input"
-                                type="number"
-                                min="0"
-                                max="59"
-                                placeholder="00">
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-            <label class="label" id="intensityLabel">Intenzitás Skála</label>
-            <div class="field">
-                <div class="control">
-                    <input
-                    id="intensitySlider"
+        </div>
+        <label class="label" id="intensityLabel">Intenzitás Skála</label>
+        <div class="field">
+            <div class="control">
+                <input
+                id="intensitySlider"
                     class="slider is-fullwidth has-output-tooltip"
                     step="33"
                     min="0"
@@ -195,70 +191,69 @@
                     list="intensity-ticks"
                     disabled>
                 </div>
-                </div>
-                <datalist id="intensity-ticks">
+            </div>
+            <datalist id="intensity-ticks">
                 <option value="0"></option>
                 <option value="33"></option>
                 <option value="66"></option>
                 <option value="100"></option>
-                </datalist>
+            </datalist>
             <div class="control">
-            <button id="sportSubmit" class="button is-primary">Rögzítés</button>
+                <button id="sportSubmit" class="button is-primary">Rögzítés</button>
             </div>
             
         </div>
-        </div>    
-    </div>
+    </div>    
 </div>
 <!--#endregion-->
 
 </section>
 
 <section class="hero is-dark">
-<!--#region Tablazat kartya-->
-
-
-<div class="card mx-6  my-4 ">
-    <div id="table-container" class="card-content">
-          <table class="table is-fullwidth is-striped is-hoverable">
-            <thead>
-                <tr>
-                <th>Sorrendje</th>
-                <th>Mozgásforma</th>
-                <th>Kezdés</th>
-                <th>Vége</th>
-                <th>Törlés<th>
-                </tr>
-            </thead>
-            <tbody id="activityTableBody">
-                <tr>
-                    <th>idx</th>
-                    <td>actName</td>
-                    <td>HH:MM</td>
-                    <td>HH:MM</td>
-                    <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
-                </tr>
-                <tr>
-                    <th>idx</th>
-                    <td>actName</td>
-                    <td>HH:MM</td>
-                    <td>HH:MM</td>
-                    <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
-                </tr>
-                <tr>
-                    <th>idx</th>
-                    <td>actName</td>
-                    <td>HH:MM</td>
-                    <td>HH:MM</td>
-                    <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
-                </tr>
-            </tbody>
-          </table>
-    </div>
-</div>
+    <!--#region Tablazat kartya-->
+    
+    
+    <div class="card mx-6  my-4 ">
+        <div id="table-container" class="card-content">
+            <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Sorrendje</th>
+                        <th>Mozgásforma</th>
+                        <th>Kezdés</th>
+                        <th>Vége</th>
+                        <th>Törlés<th>
+                        </tr>
+                    </thead>
+                    <tbody id="activityTableBody">
+                        <tr>
+                            <th>idx</th>
+                            <td>actName</td>
+                            <td>HH:MM</td>
+                            <td>HH:MM</td>
+                            <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
+                        </tr>
+                        <tr>
+                            <th>idx</th>
+                            <td>actName</td>
+                            <td>HH:MM</td>
+                            <td>HH:MM</td>
+                            <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
+                        </tr>
+                        <tr>
+                            <th>idx</th>
+                            <td>actName</td>
+                            <td>HH:MM</td>
+                            <td>HH:MM</td>
+                            <td><button class="button is-danger is-rounded"><i class="material-icons">delete</i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 </section>
 <!--#endregion-->
-</section>
+
 <section class="hero is-dark">
     <div class="control mx-auto mb-3 mt-3">
         <button class="button mr-1 is-danger" onclick="window.location.href='altalanos.html'">Előző</button>
@@ -300,6 +295,7 @@
                             </label>
                         </div>
                     </div>
+                </div>
                     <!--#endregion-->
                     <!-- #region Születési év -->
                     <div class="field">
@@ -322,13 +318,13 @@
                     <div class="field">
                         <label class="label">Magasság</label>
                         <div class="field has-addons">
-                        <div class="control is-expanded">
-                            <input
-                            class="input"
-                            type="number"
-                            id="heightInput"
-                            name="height"
-                            min="100"
+                            <div class="control is-expanded">
+                                <input
+                                class="input"
+                                type="number"
+                                id="heightInput"
+                                name="height"
+                                min="100"
                             max="250"
                             step="1"
                             placeholder="Add meg a magasságod"
@@ -399,5 +395,8 @@
     </div>
 </div>
 <!-- #endregion -->
+<script type="module" src="../js/alapadatok.js"></script>
+<script type="module" src="../js/fetching.js" async></script>
+<script type="module" src="../js/napisport.js"></script>
 </body>
 </html>
