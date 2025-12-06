@@ -1,6 +1,8 @@
 
-**Készítette**: Seres Botond 
+**Készítette**: Seres Botond
+
 **Verzió**: V.100 (Production 1) 2025.12.06. 23:52
+
 **URL**: https://botondseres.github.io/burned-calculator/
 
 **Leírás**: A weblapon néhány egyszerű egészségügyi alapadat megadása után a felhasználó megismerheti az ebből következtető adatait, mint bazális anyagcsere, bmi, ideális testsúly, stb. Ezután a következő oldalon rögzítheti az aznapi sport/mozgás aktivitását, és megnézheti a teljes napi energia a fogyasztását, és annak megoszlását.
