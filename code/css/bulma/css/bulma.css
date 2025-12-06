@@ -47,9 +47,9 @@
   --bulma-scheme-invert-ter-l: 14%;
   --bulma-scheme-invert-bis-l: 7%;
   --bulma-scheme-invert-l: 4%;
-  --bulma-family-primary: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
-  --bulma-family-secondary: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
-  --bulma-family-code: Inconsolata, Hack, SF Mono, Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
+  --bulma-family-primary: Roboto, Helvetica, Arial, sans-serif;
+  --bulma-family-secondary: Roboto, Helvetica, Arial, sans-serif;
+  --bulma-family-code: Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
   --bulma-size-small: 0.75rem;
   --bulma-size-normal: 1rem;
   --bulma-size-medium: 1.25rem;
@@ -333,9 +333,9 @@
   --bulma-link: hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 1);
   --bulma-link-base: hsla(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-l), 1);
   --bulma-link-rgb: 66.3, 88.315, 255;
-  --bulma-link-h: 233deg;
+  --bulma-link-h: 197deg;
   --bulma-link-s: 100%;
-  --bulma-link-l: 63%;
+  --bulma-link-l: 83%;
   --bulma-link-00-l: 0%;
   --bulma-link-05-l: 3%;
   --bulma-link-10-l: 8%;
@@ -948,9 +948,9 @@
     --bulma-scheme-invert-ter-l: 14%;
     --bulma-scheme-invert-bis-l: 7%;
     --bulma-scheme-invert-l: 4%;
-    --bulma-family-primary: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
-    --bulma-family-secondary: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
-    --bulma-family-code: Inconsolata, Hack, SF Mono, Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
+    --bulma-family-primary: Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --bulma-family-secondary: Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --bulma-family-code: Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
     --bulma-size-small: 0.75rem;
     --bulma-size-normal: 1rem;
     --bulma-size-medium: 1.25rem;
@@ -2899,7 +2899,7 @@ th:not([align]) {
 }
 
 :root {
-  --bulma-body-background-color: var(--bulma-scheme-main);
+  --bulma-body-background-color: rgb(45, 51, 61);
   --bulma-body-size: 1em;
   --bulma-body-min-width: 300px;
   --bulma-body-rendering: optimizeLegibility;
@@ -2945,6 +2945,7 @@ header,
 hgroup,
 section {
   display: block;
+  --bulma-footer-background-color: rgb(45, 51, 61); /*(46,51,61);*/
 }
 
 body,
@@ -6468,9 +6469,9 @@ button.tag:active,
 
 /* Bulma Components */
 .breadcrumb {
-  --bulma-breadcrumb-item-color: var(--bulma-link-text);
-  --bulma-breadcrumb-item-hover-color: var(--bulma-link-text-hover);
-  --bulma-breadcrumb-item-active-color: var(--bulma-link-text-active);
+  --bulma-breadcrumb-item-color: hsl(197deg, 80%, 83%);
+  --bulma-breadcrumb-item-hover-color: hsl(197deg,100%,calc(83% + -30%));
+  --bulma-breadcrumb-item-active-color: hsl(197deg,60%,calc(83% + -40%));
   --bulma-breadcrumb-item-padding-vertical: 0;
   --bulma-breadcrumb-item-padding-horizontal: 0.75em;
   --bulma-breadcrumb-item-separator-color: var(--bulma-border);
@@ -7157,7 +7158,7 @@ button.dropdown-item.is-selected {
   --bulma-navbar-h: var(--bulma-scheme-h);
   --bulma-navbar-s: var(--bulma-scheme-s);
   --bulma-navbar-l: var(--bulma-scheme-main-l);
-  --bulma-navbar-background-color: var(--bulma-scheme-main);
+  --bulma-navbar-background-color: rgb(46, 51, 61); /*var(--bulma-scheme-main);*/
   --bulma-navbar-box-shadow-size: 0 0.125em 0 0;
   --bulma-navbar-box-shadow-color: var(--bulma-background);
   --bulma-navbar-padding-vertical: 1rem;
@@ -7562,6 +7563,7 @@ body.has-navbar-fixed-bottom {
 
 a.navbar-item,
 .navbar-link {
+  /*background-color: rgb(46, 51, 61);*/
   background-color: hsla(var(--bulma-navbar-h), var(--bulma-navbar-s), calc(var(--bulma-navbar-item-background-l) + var(--bulma-navbar-item-background-l-delta)), var(--bulma-navbar-item-background-a));
   cursor: pointer;
 }
@@ -7569,8 +7571,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover,
 .navbar-link:focus,
 .navbar-link:focus-within,
 .navbar-link:hover {
-  --bulma-navbar-item-background-l-delta: var(--bulma-navbar-item-hover-background-l-delta);
-  --bulma-navbar-item-background-a: 1;
+  --bulma-navbar-item-background-l-delta: 34%;
+  --bulma-navbar-item-background-a: 20%;
 }
 a.navbar-item:active,
 .navbar-link:active {
@@ -7583,7 +7585,7 @@ a.navbar-item.is-active, a.navbar-item.is-selected,
   --bulma-navbar-h: var(--bulma-navbar-item-selected-h);
   --bulma-navbar-s: var(--bulma-navbar-item-selected-s);
   --bulma-navbar-l: var(--bulma-navbar-item-selected-l);
-  --bulma-navbar-item-background-l: var(--bulma-navbar-item-selected-background-l);
+  --bulma-navbar-item-background-l: 34%;
   --bulma-navbar-item-background-a: 1;
   --bulma-navbar-item-color-l: var(--bulma-navbar-item-selected-color-l);
 }
@@ -7672,7 +7674,9 @@ a.navbar-item.is-active, a.navbar-item.is-selected,
   .navbar-menu {
     background-color: var(--bulma-navbar-background-color);
     box-shadow: 0 0.5em 1em hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.1);
-    padding: 0.5rem 0;
+    padding: 0;
+    margin-top: 1rem;
+    /*padding: 0.5rem 0;*/
   }
   .navbar-menu.is-active {
     display: block;
@@ -13147,8 +13151,10 @@ label.panel-block:hover {
 }
 
 .footer {
-  --bulma-footer-background-color: var(--bulma-scheme-main-bis);
+  margin-top: 2rem;
+  --bulma-footer-background-color: rgb(50, 55, 71);
   --bulma-footer-color: false;
+  color: white;
   --bulma-footer-padding: 3rem 1.5rem 6rem;
   background-color: var(--bulma-footer-background-color);
   padding: var(--bulma-footer-padding);
@@ -13158,7 +13164,7 @@ label.panel-block:hover {
   --bulma-hero-body-padding: 3rem 1.5rem;
   --bulma-hero-body-padding-tablet: 3rem 3rem;
   --bulma-hero-body-padding-small: 1.5rem;
-  --bulma-hero-body-padding-medium: 9rem 4.5rem;
+  --bulma-hero-body-padding-medium: 4rem 4.5rem;
   --bulma-hero-body-padding-large: 18rem 6rem;
   --bulma-hero-gradient-h-offset: 5deg;
   --bulma-hero-gradient-s-offset: 10%;
@@ -21046,23 +21052,23 @@ has-background-danger.is-hoverable:active {
 }
 
 .is-family-primary {
-  font-family: "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
 }
 
 .is-family-secondary {
-  font-family: "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
 }
 
 .is-family-sans-serif {
-  font-family: "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
 }
 
 .is-family-monospace {
-  font-family: "Inconsolata", "Hack", "SF Mono", "Roboto Mono", "Source Code Pro", "Ubuntu Mono", monospace !important;
+  font-family: "Roboto Mono", "Source Code Pro", "Ubuntu Mono", monospace !important;
 }
 
 .is-family-code {
-  font-family: "Inconsolata", "Hack", "SF Mono", "Roboto Mono", "Source Code Pro", "Ubuntu Mono", monospace !important;
+  font-family: "Roboto Mono", "Source Code Pro", "Ubuntu Mono", monospace !important;
 }
 
 .is-display-none,

@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="../js/fogyasztas.js" defer></script>
     <link rel="stylesheet" href="../css\bulma\css\bulma.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/fogyasztas.css">
     <script type="module" src="../js/alapadatok.js" defer></script>
     <script type="module" src="../js/fetching.js" async></script>
+    <script type="module" src="../js/fogyasztas.js" defer></script>
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
-
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Ikonok -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!---------->
     <title>Mai energiafogyasztás</title>
 </head>
 <body>
@@ -49,8 +55,8 @@
         <!-- #region: Hero content -->
         <div class="hero-body">
             <div class="container has-text-centered">
-                <p class="title">Mai energiafogyasztás</p>
-                <p class="subtitle">Nézd meg, hogy hogyan alakult a mai energiafogasztásod a rögzített adataid alapján!</p>
+                <p class="title is-size-4-mobile is-size-3-tablet is-size-2-desktop">Mai energiafogyasztás</p>
+                <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">Nézd meg, hogy hogyan alakult a mai energiafogasztásod a rögzített adataid alapján!</p>
             </div>
         </div>
         <!--#endregion-->
@@ -91,12 +97,11 @@
         </section>
         
         
-        <!--#region Footer-->
-        <footer class="footer is-dark">
-            <div class="content has-text-centered">
-                <p><strong>Bruned Kalkulátor</strong></p>
-                <p>Készítette: Seres Botond</p>
-        <p> Source kód: <a href="">link</a></p>
+<!--#region Footer-->
+<footer class="footer is-dark">
+    <div class="content has-text-centered">
+        <p><b id="footertitle">Bruned Kalkulátor</b></p>
+        <p> Source kód: <a href="https://github.com/BotondSeres/burned-calculator">link</a></p>
     </div>
 </footer>
 <!--#endregion-->

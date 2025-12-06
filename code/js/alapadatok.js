@@ -14,7 +14,7 @@ openLink.addEventListener('click', (e) => {
     e.preventDefault();
     modal.classList.add('is-active');
 });
-
+const burger = document.querySelector(".navbar-burger")
 document.addEventListener("DOMContentLoaded", e =>{
   if(profileData != null){
       const age = document.getElementById('AgeInput');
@@ -31,9 +31,19 @@ document.addEventListener("DOMContentLoaded", e =>{
       workplaceActivityLabel.classList.add("is-selected")
       gender.checked = true;
       genderLabel.classList.add("is-selected")
-
     } 
+    burgerHandling();
 });
+
+function burgerHandling(){
+  burger.addEventListener("click", e =>{
+      const targetId = burger.dataset.target;
+      const target = document.getElementById(targetId);
+
+      burger.classList.toggle('is-active');
+      target.classList.toggle('is-active');
+  });
+}
 
 const closeModal = (e) => {
   modal.classList.remove('is-active');

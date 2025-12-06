@@ -103,22 +103,22 @@ const startHourInput = document.getElementById("startHour");
 const endHourInput = document.getElementById("endHour");
 const startMinuteInput = document.getElementById("startMinute");
 const endMinuteInput = document.getElementById("endMinute");
-if(!(/^(?:[0-9]|1[0-9]|2[0-3])$/.test(startHour.value))) // csak számok, nem kezdődik 0-val
+if(!(/^(?:[0-9]|1[0-9]|2[0-3])$/.test(startHourInput.value))) // csak számok, nem kezdődik 0-val
     {
       hiba.push("Helytelenül megadott kezdő óra!");
       console.log("Regex kezdő óra hiba!");  
     }
-if(!(/^(?:[0-9]|1[0-9]|2[0-3])$/.test(endHour.value))) // csak számok, nem kezdődik 0-val
+if(!(/^(?:[0-9]|1[0-9]|2[0-3])$/.test(endHourInput.value))) // csak számok, nem kezdődik 0-val
     {
       hiba.push("Helytelenül megadott vég óra!");
       console.log("Regex vég óra hiba!");  
     }
-if(!(/^(?:[0-9]|[1-5][0-9])$/.test(endMinute.value))) // csak számok, nem kezdődik 0-val
+if(!(/^(?:[0-9]|[1-5][0-9])$/.test(endMinuteInput.value))) // csak számok, nem kezdődik 0-val
     {
       hiba.push("Helytelenül megadott vég perc!");
       console.log("Regex vég perc hiba!");  
     }
-if(!(/^(?:[0-9]|[1-5][0-9])$/.test(startMinute.value))) // csak számok, nem kezdődik 0-val
+if(!(/^(?:[0-9]|[1-5][0-9])$/.test(startMinuteInput.value))) // csak számok, nem kezdődik 0-val
     {
       hiba.push("Helytelenül megadott kezdő perc!");
       console.log("Regex kezdő perc hiba!");  

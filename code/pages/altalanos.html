@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="../js/altalanos.js" defer></script>
     <link rel="stylesheet" href="../css\bulma\css\bulma.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/altalanos.css">
     <script type="module" src="../js/alapadatok.js" defer></script>
     <script type="module" src="../js/fetching.js" async></script>
+    <script type="module" src="../js/altalanos.js" defer></script>
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Ikonok -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!---------->
     <title>Általános Számítások</title>
 </head>
 <body>
@@ -48,8 +55,8 @@
             <!-- #region: Hero content -->
             <div class="hero-body">
                 <div class="container has-text-centered">
-                <p class="title">Általános Számítások</p>
-                <p class="subtitle">Néhány alapvető számítás, amelyek jellemzik az általános egészségi állapotod!</p>
+                <p class="title is-size-4-mobile is-size-3-tablet is-size-2-desktop">Általános Számítások</p>
+                <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">Néhány alapvető számítás, amelyek jellemzik az általános egészségi állapotod!</p>
                 </div>
             </div>
             <!--#endregion-->
@@ -76,24 +83,24 @@
         <table class="table mx-auto result-table">
             <tbody>
                 <tr>
-                <th>BMI</th>
-                <td id="bmiOutput">00,0</td>
+                <th class="is-size-7-mobile">BMI</th>
+                <td id="bmiOutput" class="is-size-7-mobile">00,0</td>
                 </tr>
                 <tr>
-                <th>Ideális Testsúly (Hamwi formula)</th>
-                <td id="hamwiOutput">00 kg</td>
+                <th class="is-size-7-mobile">Ideális Testsúly (Hamwi formula)</th>
+                <td id="hamwiOutput" class="is-size-7-mobile">00 kg</td>
                 </tr>
                 <tr>
-                <th >Ideális Testsúly Tartomány</th>
-                <td id="idealWeightOutput">00-00 kg</td>
+                <th class="is-size-7-mobile">Ideális Testsúly Tartomány</th>
+                <td id="idealWeightOutput" class="is-size-7-mobile">00-00 kg</td>
                 </tr>
                 <tr>
-                <th>Nyugalmi Anyagcsere</th>
-                <td id="rmrOutput">0000 Kcal</td>
+                <th class="is-size-7-mobile">Nyugalmi Anyagcsere</th>
+                <td id="rmrOutput" class="is-size-7-mobile">0000 Kcal</td>
                 </tr>
                 <tr>
-                <th>Napi minimum kalória igény (Csak munka, nincs sport)</th>
-                <td id="energyExpOutput">0000 Kcal</td>
+                <th class="is-size-7-mobile">Napi minimum kalória igény (Csak munka, nincs sport)</th>
+                <td id="energyExpOutput" class="is-size-7-mobile">0000 Kcal</td>
                 </tr>
             </tbody>
         </table>
@@ -113,9 +120,8 @@
 <!--#region Footer-->
 <footer class="footer is-dark">
     <div class="content has-text-centered">
-        <p><strong>Bruned Kalkulátor</strong></p>
-        <p>Készítette: Seres Botond</p>
-        <p> Source kód: <a href="">link</a></p>
+        <p><b id="footertitle">Bruned Kalkulátor</b></p>
+        <p> Source kód: <a href="https://github.com/BotondSeres/burned-calculator">link</a></p>
     </div>
 </footer>
 <!--#endregion-->

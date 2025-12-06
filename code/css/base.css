@@ -78,17 +78,21 @@ footer.footer{
   flex-direction: column;
   margin-top: auto
 }
-section.salesText{
-  padding-top: 3rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+div.salesText{
+  max-width: 70%;
+  margin: auto;
 }
-div.hero-foot{
-  padding-left: 10rem;
-  padding-right: 10rem;
-  padding-bottom: 2rem;
+section.bgWhite{
+  background-color: white;
+}
+#salesSubTitle{
+  max-width: 70%;
+  margin: auto;
 }
 #startButton{
-  padding-top: 2rem;
   text-align: center;
+}
+#table-container{
+  overflow-x: auto;
+  max-width: 100%;
 }

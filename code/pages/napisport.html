@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Napi sport bevitel</title>
-    <script type="module" src="../js/napisport.js" defer></script>
     <link rel="stylesheet" href="../css\bulma\css\bulma.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
     <script type="module" src="../js/alapadatok.js" defer></script>
     <script type="module" src="../js/fetching.js" async></script>
+    <script type="module" src="../js/napisport.js" defer></script>
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
-
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Ikonok -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!---------->
+    <title>Napi sport bevitel</title>
 </head>
 <body>
  <!-- #region Hero -->
@@ -48,8 +54,8 @@
             <!-- #region: Hero content -->
             <div class="hero-body">
                 <div class="container has-text-centered">
-                <p class="title">Mai mozgás rögzítése</p>
-                <p class="subtitle">Állítsd be a megfelelő paramétereket a kártyán, majd mentéssel rögzítsd a mozgásod!<br>A táblázatban meg fog jelenni ezután. Innen törölheted is.</p>
+                <p class="title is-size-4-mobile is-size-3-tablet is-size-2-desktop">Mai mozgás rögzítése</p>
+                <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">Állítsd be a megfelelő paramétereket a kártyán, majd mentéssel rögzítsd a mozgásod!<br>A táblázatban meg fog jelenni ezután. Innen törölheted is.</p>
                 </div>
             </div>
             <!--#endregion-->
@@ -58,10 +64,10 @@
             <div class="hero-foot">
                 <nav class="breadcrumb has-arrow-separator pb-2 is-centered" aria-label="breadcrumbs">
                 <ul>
-                    <li><a id="brModal" href="#">Alap Adatok</a></li>
-                    <li><a href="./altalanos.html">Általános Számítások</a></li>
-                    <li class="is-active"><a href="#" aria-current="page">Napi Mozgás</a></li>
-                    <li><a href="#">Teljes Energiafogyasztás</a></li>
+                    <li><a id="brModal" href="#" class="is-size-6-mobile is-size-5-tablet is-size-4-desktop">Alap Adatok</a></li>
+                    <li><a href="./altalanos.html" class="is-size-6-mobile is-size-5-tablet is-size-4-desktop">Általános Számítások</a></li>
+                    <li class="is-active"><a href="#" aria-current="page" class="is-size-6-mobile is-size-5-tablet is-size-4-desktop">Napi Mozgás</a></li>
+                    <li><a href="./fogyasztas.html" class="is-size-6-mobile is-size-5-tablet is-size-4-desktop">Teljes Energiafogyasztás</a></li>
                 </ul>
                 </nav>
             </div>
@@ -95,7 +101,7 @@
                         <div id="activityDropdownActive" class="dropdown">
                             <div class="dropdown-trigger">
                                 <button id="activityDropdown" class="button " aria-haspopup="true" aria-controls="dropdown-menu3" disabled>
-                                <span id="chosenActivity">Mozgás</span>
+                                <span id="chosenActivity" class="is-size-7-mobile">Mozgás</span>
                                 <i class="material-icons">arrow_drop_down</i>
                                 
                                 </button>
@@ -124,7 +130,7 @@
                             </div>
 
                             <div class="control">
-                            <a class="button is-static">:</a>
+                            <a class="button is-static is-hidden-mobile">:</a>
                             </div>
 
                             <div class="control">
@@ -155,7 +161,7 @@
                             </div>
 
                             <div class="control">
-                            <a class="button is-static">:</a>
+                            <a class="button is-static is-hidden-mobile">:</a>
                             </div>
 
                             <div class="control">
@@ -184,7 +190,8 @@
                     max="99"
                     value="0"
                     type="range"
-                    list="intensity-ticks">
+                    list="intensity-ticks"
+                    disabled>
                 </div>
                 </div>
                 <datalist id="intensity-ticks">
@@ -210,7 +217,7 @@
 
 
 <div class="card mx-6  my-4 ">
-    <div class="card-content">
+    <div id="table-container" class="card-content">
           <table class="table is-fullwidth is-striped is-hoverable">
             <thead>
                 <tr>
@@ -251,7 +258,7 @@
 <!--#endregion-->
 </section>
 <section class="hero is-dark">
-    <div class="control mx-auto mb-3">
+    <div class="control mx-auto mb-3 mt-3">
         <button class="button mr-1 is-danger" onclick="window.location.href='altalanos.html'">Előző</button>
         <button class="button ml-1 is-success" onclick="window.location.href='fogyasztas.html'">Következő</button>
     </div>
@@ -259,9 +266,8 @@
 <!--#region Footer-->
 <footer class="footer is-dark">
     <div class="content has-text-centered">
-        <p><strong>Bruned Kalkulátor</strong></p>
-        <p>Készítette: Seres Botond</p>
-        <p> Source kód: <a href="">link</a></p>
+        <p><b>Bruned Kalkulátor</b></p>
+        <p> Source kód: <a href="https://github.com/BotondSeres/burned-calculator">link</a></p>
     </div>
 </footer>
 <!--#endregion-->

@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burned Kalkulátor</title>
     <link rel="stylesheet" href="./code/css\bulma\css\bulma.css">
     <link rel="stylesheet" href="./code/css/base.css">
     <script type="module" src="./code/js/alapadatok.js" defer></script>
     <script type="module" src="./code/js/fetching.js" async></script>
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
-
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!---------->
+    <title>Burned Kalkulátor</title>
 </head>
 <body>
     <!-- #region Hero -->
@@ -43,24 +48,27 @@
             </div>
 
             <!-- #region: Hero content -->
-            <div class="hero-body">
+            <div class="hero-body pb-5">
                 <div class="container has-text-centered">
-                <p class="title">Burned Kalkulátor</p>
-                <p class="subtitle">Ismerd meg a napi energiafogyasztásod megoszlását!</p>
+                <p class="title is-size-4-mobile is-size-3-tablet is-size-2-desktop">Burned Kalkulátor</p>
+                <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">Ismerd meg a napi energiafogyasztásod megoszlását!</p>
                 </div>
-                <div id="startButton" class="control"><button class="button is-success" onclick="window.location.href='code/pages/altalanos.html'">Kedzjük!</button></div>
+                <div id="startButton" class="control pt-4"><button class="button is-success" onclick="window.location.href='code/pages/altalanos.html'">Kedzjük!</button></div>
             </div>
-            <div class="hero-foot">
-                <p>Számold ki alapanyagcserédet (BMR), munkahelyi kalóriakiadásodat és sporttevékenységeidet – mindezt néhány személyes adat alapján. Lásd egy átlátható diagramon, hogyan oszlik meg a napi energiaigényed.</p>
+            <div class="hero-foot px-6 pb-4">
+                <p id="salesSubTitle" class="is-size-6-mobile is-size-5-tablet is-size-5-desktop is-size-5-widescreen">Számold ki alapanyagcserédet (BMR), munkahelyi kalóriakiadásodat és sporttevékenységeidet – mindezt néhány személyes adat alapján. Lásd egy átlátható diagramon, hogyan oszlik meg a napi energiaigényed.</p>
             </div>
             <!--#endregion-->
 
             </section>
-            <section class="salesText">
+            <section class="bgWhite px-6 pt-4 pb-5">
+                <div class="salesText">
                 <h1 class="title is-4">Miért használd?</h1>
                 <p>Egyszerűen add meg korodat, nemedet, testsúlyodat, magasságodat és napi rutinodat – a kalkulátor azonnal kiszámolja a BMR-t, a munkával járó kalóriát és a sport hozzáadását. A végeredményt szép kördiagram mutatja felosztásban, így azonnal átláthatod, mitől függ a napi energiafogyasztásod. Tökéletes diétához, edzéstervezéshez vagy csak a tudatos életmódhoz.​</p>
+                </div>
             </section>
-            <section class="salesText pb-5">
+            <section class="bgWhite px-6 pt-4 pb-5">
+                <div class="salesText">
                 <h1 class="title is-4">Hogyan működik?</h1>
                 <ul>
                     <li><strong>BMR számítás:</strong> Alapanyagcseréd, amit tested pihenés közben fogyaszt (testsúly, magasság, kor alapján).</li>
@@ -68,17 +76,20 @@
                     <li><strong>Sporttevékenységek:</strong> Válassz ki időtartamot és típust (futás, úszás, stb.) – és lásd a teljes napi energiaigényed.</li>
                     <li><strong>Eredmény:</strong> Színes diagram mutatja a százalékos megoszlást részletekkel.</li>
                 </ul>
+                </div>
             </section>
-            <section class="salesText pb-5">
+            <section class="bgWhite px-6 pt-4 pb-5">
+                <div class="salesText">
                 <h1 class="title is-4">Csak szórakoztatásra</h1>
                 <p>A szolgáltatás tartalma általános jellegű, nem teljeskörű és kizárólag szórakoztatási célokat szolgál.</p>
                 <p>A Szolgáltatás használatával Ön tudomásul veszi és elfogadja, hogy nem vállalunk felelősséget, sem közvetlenül, sem közvetve, semmilyen kárért vagy veszteségért, amelyet a Szolgáltatásunk használata vagy az arra való támaszkodás okozott vagy állítólagosan okozott.</p>
+                </div>
             </section>
     <!-- #endregion -->
 <!--#region Footer-->
 <footer class="footer is-dark">
     <div class="content has-text-centered">
-        <p><strong>Bruned Kalkulátor</strong></p>
+        <p><b>Bruned Kalkulátor</b></p>
         <p> Source kód: <a href="https://github.com/BotondSeres/burned-calculator">link</a></p>
     </div>
 </footer>
