@@ -1,14 +1,18 @@
 
-**Készítette**: Seres Botond 
+**Készítette**: Seres Botond
+
 **Verzió**: V.100 (Production 1) 2025.12.06. 23:52
+
 **URL**: https://botondseres.github.io/burned-calculator/
 
 **Leírás**: A weblapon néhány egyszerű egészségügyi alapadat megadása után a felhasználó megismerheti az ebből következtető adatait, mint bazális anyagcsere, bmi, ideális testsúly, stb. Ezután a következő oldalon rögzítheti az aznapi sport/mozgás aktivitását, és megnézheti a teljes napi energia a fogyasztását, és annak megoszlását.
 
 **Egyedi javascript logika elérése**: ./code/js/calculations.js
-	Leírása: A weboldal üzleti logikája a különböző egészségügyi adatok számításával foglalkozik. Többek között itt számolok BMI-t, ideális testsúlyt, kalória égetést az adott sport tevékenységekhez (MET adatokból), stb. Ezt a modult több helyen importálom az oldalak saját script-jeiben és használom fel a benne található függvényeket.
+	
+Leírása: A weboldal üzleti logikája a különböző egészségügyi adatok számításával foglalkozik. Többek között itt számolok BMI-t, ideális testsúlyt, kalória égetést az adott sport tevékenységekhez (MET adatokból), stb. Ezt a modult több helyen importálom az oldalak saját script-jeiben és használom fel a benne található függvényeket.
 	
 **Egyedi Font típus**: Roboto
+
 	Helye: https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap
 
 # KÜLSŐ FORRÁSOK ÉS KÓDRÉSZLETEK:
