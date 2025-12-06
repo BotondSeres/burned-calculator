@@ -2,7 +2,7 @@
 /* 1. Reset/globális */
 * { box-sizing: border-box; }
 
-/* 2. Saját színek, typography */
+/* 2. Saját színek */
 :root {
   --primary: #3498db;
   --dark: #2c3e50;
@@ -23,6 +23,7 @@
   width: 2.5em;
   /* ezzel meg csak nagyobbá tettem őket*/
 }
+/*Modal radio gombok kivalasztasa*/
 #workplaceActivity .button.is-selected, #sex .button.is-selected{
   border: 2px solid #353535;
   /* Szürkére színezés
@@ -95,4 +96,41 @@ section.bgWhite{
 #table-container{
   overflow-x: auto;
   max-width: 100%;
+}
+
+
+/* Fogyasztás */
+#chartTitle{
+    text-align: center;
+}
+#pie-chart{
+    margin: auto;
+}
+#chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;     
+  margin: 0 auto;
+}
+
+#chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+#totalCal{
+    font-size: smaller;
+    text-align: center;
+}
+
+/* #region Altalanos Szamitasok */
+
+footer.footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: auto
+}
+.result-table td:first-child,
+.result-table th:first-child {
+  padding-right: 4rem;
+  vertical-align: middle;
 }

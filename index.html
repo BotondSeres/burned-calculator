@@ -2,9 +2,13 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Napi energiaigény kalkulátor.">
+    <meta name="keywords" content="Anyagcsere, BMR, Klória">
+    <meta name="author" content="Botond Seres">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Code -->
     <link rel="stylesheet" href="./code/css\bulma\css\bulma.css">
-    <link rel="stylesheet" href="./code/css/base.css">
+    <link rel="stylesheet" href="./code/css/style.css">
     <script type="module" src="./code/js/alapadatok.js" defer></script>
     <script type="module" src="./code/js/fetching.js" async></script>
     <!-- Favicon -->
@@ -20,7 +24,7 @@
 <body>
     <!-- #region Hero -->
         <section class="hero is-dark is-medium">
-            <!-- Hero head: will stick at the top -->
+            <!-- Hero head: Navigacio -->
             <div class="hero-head">
                 <nav class="navbar">
                 <div class="container">
@@ -59,33 +63,36 @@
                 <p id="salesSubTitle" class="is-size-6-mobile is-size-5-tablet is-size-5-desktop is-size-5-widescreen">Számold ki alapanyagcserédet (BMR), munkahelyi kalóriakiadásodat és sporttevékenységeidet – mindezt néhány személyes adat alapján. Lásd egy átlátható diagramon, hogyan oszlik meg a napi energiaigényed.</p>
             </div>
             <!--#endregion-->
-
-            </section>
-            <section class="bgWhite px-6 pt-4 pb-5">
-                <div class="salesText">
-                <h1 class="title is-4">Miért használd?</h1>
-                <p>Egyszerűen add meg korodat, nemedet, testsúlyodat, magasságodat és napi rutinodat – a kalkulátor azonnal kiszámolja a BMR-t, a munkával járó kalóriát és a sport hozzáadását. A végeredményt szép kördiagram mutatja felosztásban, így azonnal átláthatod, mitől függ a napi energiafogyasztásod. Tökéletes diétához, edzéstervezéshez vagy csak a tudatos életmódhoz.​</p>
-                </div>
-            </section>
-            <section class="bgWhite px-6 pt-4 pb-5">
-                <div class="salesText">
-                <h1 class="title is-4">Hogyan működik?</h1>
-                <ul>
-                    <li><strong>BMR számítás:</strong> Alapanyagcseréd, amit tested pihenés közben fogyaszt (testsúly, magasság, kor alapján).</li>
-                    <li><strong>Munkahelyi kalória:</strong> Add meg munkád intenzitását (ülés, állás, mozgás) – és ez is hozzáadódik a napi fogyasztáshoz.</li>
-                    <li><strong>Sporttevékenységek:</strong> Válassz ki időtartamot és típust (futás, úszás, stb.) – és lásd a teljes napi energiaigényed.</li>
-                    <li><strong>Eredmény:</strong> Színes diagram mutatja a százalékos megoszlást részletekkel.</li>
-                </ul>
-                </div>
-            </section>
-            <section class="bgWhite px-6 pt-4 pb-5">
-                <div class="salesText">
-                <h1 class="title is-4">Csak szórakoztatásra</h1>
-                <p>A szolgáltatás tartalma általános jellegű, nem teljeskörű és kizárólag szórakoztatási célokat szolgál.</p>
-                <p>A Szolgáltatás használatával Ön tudomásul veszi és elfogadja, hogy nem vállalunk felelősséget, sem közvetlenül, sem közvetve, semmilyen kárért vagy veszteségért, amelyet a Szolgáltatásunk használata vagy az arra való támaszkodás okozott vagy állítólagosan okozott.</p>
-                </div>
-            </section>
+        </section>
+        
     <!-- #endregion -->
+
+
+    <section class="bgWhite px-6 pt-4 pb-5">
+        <div class="salesText">
+        <h1 class="title is-4">Miért használd?</h1>
+        <p>Egyszerűen add meg korodat, nemedet, testsúlyodat, magasságodat és napi rutinodat – a kalkulátor azonnal kiszámolja a BMR-t, a munkával járó kalóriát és a sport hozzáadását. A végeredményt szép kördiagram mutatja felosztásban, így azonnal átláthatod, mitől függ a napi energiafogyasztásod. Tökéletes diétához, edzéstervezéshez vagy csak a tudatos életmódhoz.​</p>
+        </div>
+    </section>
+    <section class="bgWhite px-6 pt-4 pb-5">
+        <div class="salesText">
+        <h1 class="title is-4">Hogyan működik?</h1>
+        <ul>
+            <li><strong>BMR számítás:</strong> Alapanyagcseréd, amit tested pihenés közben fogyaszt (testsúly, magasság, kor alapján).</li>
+            <li><strong>Munkahelyi kalória:</strong> Add meg munkád intenzitását (ülés, állás, mozgás) – és ez is hozzáadódik a napi fogyasztáshoz.</li>
+            <li><strong>Sporttevékenységek:</strong> Válassz ki időtartamot és típust (futás, úszás, stb.) – és lásd a teljes napi energiaigényed.</li>
+            <li><strong>Eredmény:</strong> Színes diagram mutatja a százalékos megoszlást részletekkel.</li>
+        </ul>
+        </div>
+    </section>
+    <section class="bgWhite px-6 pt-4 pb-5">
+        <div class="salesText">
+        <h1 class="title is-4">Csak szórakoztatásra</h1>
+        <p>A szolgáltatás tartalma általános jellegű, nem teljeskörű és kizárólag szórakoztatási célokat szolgál.</p>
+        <p>A Szolgáltatás használatával Ön tudomásul veszi és elfogadja, hogy nem vállalunk felelősséget, sem közvetlenül, sem közvetve, semmilyen kárért vagy veszteségért, amelyet a Szolgáltatásunk használata vagy az arra való támaszkodás okozott vagy állítólagosan okozott.</p>
+        </div>
+    </section>
+
 <!--#region Footer-->
 <footer class="footer is-dark">
     <div class="content has-text-centered">
