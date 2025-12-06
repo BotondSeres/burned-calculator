@@ -9,7 +9,7 @@
 
 **Egyedi javascript logika elérése**: ./code/js/calculations.js
 	
-	Leírása: A weboldal üzleti logikája a különböző egészségügyi adatok számításával foglalkozik. Többek között itt számolok BMI-t, ideális testsúlyt, kalória égetést az adott sport tevékenységekhez (MET adatokból), stb. Ezt a modult több helyen importálom az oldalak saját script-jeiben és használom fel a benne található függvényeket.
+Leírása: A weboldal üzleti logikája a különböző egészségügyi adatok számításával foglalkozik. Többek között itt számolok BMI-t, ideális testsúlyt, kalória égetést az adott sport tevékenységekhez (MET adatokból), stb. Ezt a modult több helyen importálom az oldalak saját script-jeiben és használom fel a benne található függvényeket.
 	
 **Egyedi Font típus**: Roboto
 
