@@ -28,7 +28,8 @@ function noProfileData(){
 // BMI
 const bmiOut = document.getElementById("bmiOutput");
 function BMIOutput(){
-    if (Object.keys(profileData).length >0){
+    
+    if(profileData != null && Object.keys(profileData).length > 0){
         const userBMI = GetBmi(profileData.height, profileData.weight);
         bmiOut.innerText = userBMI;
     }

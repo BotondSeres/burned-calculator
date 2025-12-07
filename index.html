@@ -7,8 +7,8 @@
     <meta name="author" content="Botond Seres">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Code -->
-    <link rel="stylesheet" href="./code/css/bulma/css/bulma.css">
-    <link rel="stylesheet" href="./code/css/style.css">
+    <link rel="stylesheet" href="/burned-calculator/code/css/bulma/css/bulma.css">
+    <link rel="stylesheet" href="/burned-calculator/code/css/style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/burned-calculator/assets/img/favicon.ico">
@@ -52,12 +52,12 @@
         <div class="hero-body pb-5">
             <div class="container has-text-centered">
                 <p class="title is-size-4-mobile is-size-3-tablet is-size-2-desktop">Burned Kalkulátor</p>
-                <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">Ismerd meg a napi energiafogyasztásod megoszlását!</p>
+                <p class="subtitle is-size-6-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">Ismerd meg a napi energiafogyasztásod és a fogyasztás eloszlását!</p>
             </div>
-                <div id="startButton" class="control pt-4"><button class="button is-success" onclick="window.location.href='code/pages/altalanos.html'">Kedzjük!</button></div>
+                <div id="startButton" class="control pt-4"><button class="button is-success" onclick="window.location.href='code/pages/altalanos.html'">Kezdjük!</button></div>
             </div>
             <div class="hero-foot px-6 pb-4">
-                <p id="salesSubTitle" class="is-size-6-mobile is-size-5-tablet is-size-5-desktop is-size-5-widescreen">Számold ki alapanyagcserédet (BMR), munkahelyi kalóriakiadásodat és sporttevékenységeidet – mindezt néhány személyes adat alapján. Lásd egy átlátható diagramon, hogyan oszlik meg a napi energiaigényed.</p>
+                <p id="salesSubTitle" class="is-size-6-mobile is-size-5-tablet is-size-5-desktop is-size-5-widescreen">Számold ki nyugalmi anyagcseréd (BMR – Basal Metabolic Rate), munkahelyi és szabadidős tevékenységeid energiafogyasztását – mindezt néhány adat megadásával. Tekintsd át diagramon, hogyan oszlik el a napi energiaigényed.</p>
             </div>
             <!--#endregion-->
         </section>
@@ -68,25 +68,27 @@
         <section class="bgWhite px-6 pt-4 pb-5">
             <div class="salesText">
                 <h1 class="title is-4">Miért használd?</h1>
-                <p>Egyszerűen add meg korodat, nemedet, testsúlyodat, magasságodat és napi rutinodat – a kalkulátor azonnal kiszámolja a BMR-t, a munkával járó kalóriát és a sport hozzáadását. A végeredményt szép kördiagram mutatja felosztásban, így azonnal átláthatod, mitől függ a napi energiafogyasztásod. Tökéletes diétához, edzéstervezéshez vagy csak a tudatos életmódhoz.​</p>
+                <p>Add meg életkorod, nemedet, testsúlyod, magasságod és napi rutinodat – a kalkulátor ez alapján kiszámolja a tejes napi energiaszükségleted, az alap, a munkával járó és a szabadidő során felhasznált energiát. A végeredményt vizuálisan kördiagram formában is megmutatja, így egyszerűen átláthatod, mely tevékenységed, milyen mértékben befolyásolja a napi energiafogyasztásod. Tökéletes diétához, edzéstervezéshez vagy csak a tudatos életmódhoz.</p>
             </div>
         </section>
         <section class="bgWhite px-6 pt-4 pb-5">
             <div class="salesText">
                 <h1 class="title is-4">Hogyan működik?</h1>
                 <ul>
-                    <li><strong>BMR számítás:</strong> Alapanyagcseréd, amit tested pihenés közben fogyaszt (testsúly, magasság, kor alapján).</li>
-                    <li><strong>Munkahelyi kalória:</strong> Add meg munkád intenzitását (ülés, állás, mozgás) – és ez is hozzáadódik a napi fogyasztáshoz.</li>
-                    <li><strong>Sporttevékenységek:</strong> Válassz ki időtartamot és típust (futás, úszás, stb.) – és lásd a teljes napi energiaigényed.</li>
-                    <li><strong>Eredmény:</strong> Színes diagram mutatja a százalékos megoszlást részletekkel.</li>
+                    <li><strong>Nyugalmi anyagcsere számítás:</strong> Alapanyagcseréd (BMR), ami a szervezeted „alapműködéséhez” szükséges energia. Számítása a testsúly, a magasság és az életkor alapján a Harris–Benedict egyenletek (1918-1919) felhasználásával történik.</li>
+                    <li><strong>BMI:</strong> A WHO Body Mass Index (BMI) a leggyakoribb módja annak, hogy meghatározzuk a test általános fittségi állapotát, és azt, hogy egy személy sovány vagy túlsúlyos-e. A BMI kiszámításához egyszerűen el kell osztani egy személy kilogrammban kifejezett súlyát méterben mért testmagasságának négyzetével.</li>
+                    <li><strong>Ideális testsúly:</strong> Az ideális testsúly kiszámítása két módon történik. Első a testmagasságból és a normál BMI tartomány értékeiből kerül meghatározásra, még a másik mód a Hamwi formula (Dr. G.J. Hamwi 1964) használatával.</li>
+                    <li><strong>Munkahelyi kalória:</strong> Add meg munkád intenzitását (ülés, állás, mozgás) – és ez hozzáadódik az alapműködés energiafogyasztáshoz.</li>
+                    <li><strong>Szabadidős tevékenységek:</strong> Add meg kezdő és befejező időpontját, típusát (futás, úszás, stb.) és intenzitását, hogy lásd a teljes napi energiaigényed.</li>
+                    <li><strong>Eredmény:</strong> Az eredményeket táblázatos formában és informatív diagram formájában is áttekintheted.</li>
                 </ul>
             </div>
         </section>
         <section class="bgWhite px-6 pt-4 pb-5">
             <div class="salesText">
                 <h1 class="title is-4">Csak szórakoztatásra</h1>
-                <p>A szolgáltatás tartalma általános jellegű, nem teljeskörű és kizárólag szórakoztatási célokat szolgál.</p>
-                <p>A Szolgáltatás használatával Ön tudomásul veszi és elfogadja, hogy nem vállalunk felelősséget, sem közvetlenül, sem közvetve, semmilyen kárért vagy veszteségért, amelyet a Szolgáltatásunk használata vagy az arra való támaszkodás okozott vagy állítólagosan okozott.</p>
+                <p>Az alkalmazás tartalma általános jellegű, nem teljeskörű és kizárólag szórakoztatási célokat szolgál.</p>
+                <p>Az alkalmazás használatával tudomásul veszi és elfogadja, hogy nem vállalok felelősséget, sem közvetlenül, sem közvetve, semmilyen kárért vagy veszteségért, amelyet az alkalmazás használata vagy az arra való támaszkodás okozott vagy állítólagosan okozott.</p>
             </div>
         </section>
         

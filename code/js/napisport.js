@@ -103,6 +103,7 @@ const startHourInput = document.getElementById("startHour");
 const endHourInput = document.getElementById("endHour");
 const startMinuteInput = document.getElementById("startMinute");
 const endMinuteInput = document.getElementById("endMinute");
+let hiba = [];
 if(!(/^(?:[0-9]|1[0-9]|2[0-3])$/.test(startHourInput.value))) // csak számok, nem kezdődik 0-val
     {
       hiba.push("Helytelenül megadott kezdő óra!");
@@ -123,19 +124,26 @@ if(!(/^(?:[0-9]|[1-5][0-9])$/.test(startMinuteInput.value))) // csak számok, ne
       hiba.push("Helytelenül megadott kezdő perc!");
       console.log("Regex kezdő perc hiba!");  
     }
-let startTimeM = parseInt(startHourInput.value) * 60 + parseInt(startMinuteInput.value);
-let endTimeM = endHourInput.value * 60 + parseInt(endMinuteInput.value);
-let startHour = parseInt(startHourInput.value);
-let endHour = parseInt(endHourInput.value);
-let startMinute = parseInt(startMinuteInput.value);
-let endMinute = parseInt(endMinuteInput.value);
-if(endTimeM <= startTimeM){
-    endTimeM += 1440;
+if (hiba.length > 0) {
+      hiba.forEach(hiba => {
+        alert(hiba)
+      });
+      return null;
+}else{
+    let startTimeM = parseInt(startHourInput.value) * 60 + parseInt(startMinuteInput.value);
+    let endTimeM = endHourInput.value * 60 + parseInt(endMinuteInput.value);
+    let startHour = parseInt(startHourInput.value);
+    let endHour = parseInt(endHourInput.value);
+    let startMinute = parseInt(startMinuteInput.value);
+    let endMinute = parseInt(endMinuteInput.value);
+    if(endTimeM <= startTimeM){
+        endTimeM += 1440;
+    }
+    let timeDiff = endTimeM - startTimeM;
+    let kezdesFormazott = `${String(startHourInput.value).padStart(2,'0')}:${String(startMinuteInput.value).padStart(2,'0')}`;
+    let befejezesFormazott = `${String((Math.floor(endTimeM/60))%24).padStart(2,'0')}:${String(endTimeM%60).padStart(2,'0')}`;
+    return {startTimeM, endTimeM, timeDiff, kezdesFormazott, befejezesFormazott, startHour, endHour, startMinute, endMinute};
 }
-let timeDiff = endTimeM - startTimeM;
-let kezdesFormazott = `${String(startHourInput.value).padStart(2,'0')}:${String(startMinuteInput.value).padStart(2,'0')}`;
-let befejezesFormazott = `${String((Math.floor(endTimeM/60))%24).padStart(2,'0')}:${String(endTimeM%60).padStart(2,'0')}`;
-return {startTimeM, endTimeM, timeDiff, kezdesFormazott, befejezesFormazott, startHour, endHour, startMinute, endMinute};
 };
 
 // # region Slider kezelése
@@ -152,7 +160,7 @@ intensitySlider.addEventListener('change', (e) => {
 const sportSubmit = document.getElementById("sportSubmit");
 sportSubmit.addEventListener('click', (e) => {
     let idoO = idoKezeles();
-    if(idoO.timeDiff > 0 && selectedActivity != "Mozgás" && selectedCategory != "Kategória" && idoO.startHour >=0 && idoO.startHour <24 && idoO.endHour >=0 && idoO.endHour <24 && idoO.startMinute >=0 && idoO.startMinute <60 && idoO.endMinute >=0 && idoO.endMinute <60){
+    if(idoO != null && (idoO.timeDiff > 0 && selectedActivity != "Mozgás" && selectedCategory != "Kategória" && idoO.startHour >=0 && idoO.startHour <24 && idoO.endHour >=0 && idoO.endHour <24 && idoO.startMinute >=0 && idoO.startMinute <60 && idoO.endMinute >=0 && idoO.endMinute <60)){
         e.preventDefault();
         saveNewActivity(selectedCategory, selectedActivity, intensityValue, idoO);
         alert("Sikeres mentés!");
