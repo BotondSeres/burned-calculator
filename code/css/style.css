@@ -134,3 +134,9 @@ footer.footer{
   padding-right: 4rem;
   vertical-align: middle;
 }
+#selectorCard{
+  min-width: 280px;
+}
+#tableCard{
+  min-width: 280px;
+}
