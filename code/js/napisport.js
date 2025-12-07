@@ -160,8 +160,8 @@ if (hiba.length > 0) {
     let endTimeM = endHourInput.value * 60 + parseInt(endMinuteInput.value);
     let startHour = parseInt(startHourInput.value);
     let endHour = parseInt(endHourInput.value);
-    let startMinute = removeLeadingZero(parseInt(startMinuteInput.value));
-    let endMinute = removeLeadingZero(parseInt(endMinuteInput.value));
+    let startMinute = parseInt(removeLeadingZero(startMinuteInput.value));
+    let endMinute = parseInt(removeLeadingZero(endMinuteInput.value));
     if(endTimeM <= startTimeM){
         endTimeM += 1440;
     }
