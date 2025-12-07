@@ -1,12 +1,30 @@
 import { getFromLocalStorage, saveToLocalStorage, getMaxIDFromLocalStorage, clearOutdatedActivities } from "./localStorage.js";
 const metData = getFromLocalStorage("metData", "json");
 console.log(metData);
+let profileData = {};
+function getProfileData(){
+    profileData = getFromLocalStorage("profileData", "json");
+    if(profileData === null){
+        const profileDataHidden = document.getElementById("profileDataHidden");
+        profileDataHidden.value = 0;
+        noProfileData(profileDataHidden);
+    }else{
+        profileDataHidden.value = 1;
+        console.log("Profile data loaded.")
+    }
+}
+function noProfileData(profileDataHidden){
+    if(profileDataHidden.value == 0){
+        window.location.href = "altalanos.html"
+    }
+}
 let kategoriaLista = [];
 metData.forEach(kategoria =>{
     kategoriaLista.push(`${kategoria.category}`);
 })
 
 document.addEventListener('DOMContentLoaded', (e) => {
+    getProfileData();
     clearOutdatedActivities();
     refreshTable();
     setupDeleteButtons();

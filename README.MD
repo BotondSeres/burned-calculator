@@ -1,4 +1,4 @@
-
+    
 **Készítette**: Seres Botond
 
 **Verzió**: V.100 (Production 1) 2025.12.06. 23:52
