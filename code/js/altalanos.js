@@ -37,7 +37,7 @@ function BMIOutput(){
 // Hamwi
 const hamwiOut = document.getElementById("hamwiOutput");
 function HamwiOutput(){
-    if (Object.keys(profileData).length >0){
+    if (profileData != null && Object.keys(profileData).length >0){
         const userIdealWeight = `${CalculateIdealWeightHamwi(profileData.sex, profileData.height)} kg`;
         hamwiOut.innerText = userIdealWeight;
     }
@@ -46,7 +46,7 @@ function HamwiOutput(){
 // Normal range bmi: 18.5-24.9
 const idealWeightOut = document.getElementById("idealWeightOutput");
 function idealWeightRangeOutput(){
-    if (Object.keys(profileData).length >0){
+    if (profileData != null && Object.keys(profileData).length >0){
         const userIdealWeightRange = `${BmiToKg(18.5, profileData.height)}-${BmiToKg(24.9, profileData.height)} kg`;
         idealWeightOut.innerText = userIdealWeightRange;
     }
@@ -55,7 +55,7 @@ function idealWeightRangeOutput(){
 const rmrOut = document.getElementById("rmrOutput");
 const minCalOut = document.getElementById("energyExpOutput");
 function KCalOutput(){
-    if (Object.keys(profileData).length >0){
+    if (profileData != null && Object.keys(profileData).length >0){
         const userRMR = CalculateBMR(profileData.sex, profileData.height, profileData.weight, profileData.age);
         rmrOut.innerText = `${userRMR} Kcal`;
         const userEnergyExp = `${CalculateWorkingDailyEnergyExpenditure(userRMR, profileData.workplaceActivity)} Kcal`
