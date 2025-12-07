@@ -59,6 +59,7 @@ categoryItems.forEach(item => {
         activitySzoveg.innerText = "Mozgás";
         const intensitySlider = document.getElementById("intensitySlider");
         intensitySlider.value = 0;
+        intensitySlider.disabled = true;
         kategoriaDropdownActive.classList.remove('is-active');
         if(kategoriaSzoveg.innerText != "Kategória"){
             
