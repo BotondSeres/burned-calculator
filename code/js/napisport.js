@@ -57,7 +57,7 @@ categoryItems.forEach(item => {
         kategoriaSzoveg.innerText = item.innerText;
         const activitySzoveg = document.getElementById("chosenActivity");
         activitySzoveg.innerText = "Mozgás";
-        console.log("Category clicked")
+        console.log("Category clicked");
         const intensitySlider = document.getElementById("intensitySlider");
         intensitySlider.value = 0;
         intensitySlider.disabled = true;
