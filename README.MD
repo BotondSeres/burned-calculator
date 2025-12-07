@@ -1,7 +1,7 @@
-    
+
 **Készítette**: Seres Botond
 
-**Verzió**: V.100 (Production 1) 2025.12.06. 23:52
+**Verzió**: V.100.4 2025.12.07. 14:35
 
 **URL**: https://botondseres.github.io/burned-calculator/
 
