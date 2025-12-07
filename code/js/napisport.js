@@ -9,13 +9,15 @@ function getProfileData(){
         profileDataHidden.value = 0;
         noProfileData(profileDataHidden);
     }else{
-        profileDataHidden.value = 1;
+        profileDataHidden.value = 1; // van profil adat
         console.log("Profile data loaded.")
     }
 }
 function noProfileData(profileDataHidden){
     if(profileDataHidden.value == 0){
         window.location.href = "altalanos.html"
+    }else if(profileDataHidden.value == 1){
+        return;
     }
 }
 let kategoriaLista = [];
@@ -55,6 +57,8 @@ categoryItems.forEach(item => {
         kategoriaSzoveg.innerText = item.innerText;
         const activitySzoveg = document.getElementById("chosenActivity");
         activitySzoveg.innerText = "Mozgás";
+        const intensitySlider = document.getElementById("intensitySlider");
+        intensitySlider.value = 0;
         kategoriaDropdownActive.classList.remove('is-active');
         if(kategoriaSzoveg.innerText != "Kategória"){
             
@@ -79,6 +83,8 @@ categoryItems.forEach(item => {
                 item.addEventListener('click', (e) => {
                     const activitySzoveg = document.getElementById("chosenActivity");
                     activitySzoveg.innerText = item.innerText;
+                    const intensitySlider = document.getElementById("intensitySlider");
+                    intensitySlider.value = 0;
                     activityDropdownActive.classList.remove('is-active');
                     if(activitySzoveg.innerText != "Mozgás"){
                         // Menü feltöltése a kiválasztott kategória alapján
@@ -132,12 +138,12 @@ if(!(/^(?:[0-9]|1[0-9]|2[0-3])$/.test(endHourInput.value))) // csak számok, nem
       hiba.push("Helytelenül megadott vég óra!");
       console.log("Regex vég óra hiba!");  
     }
-if(!(/^(?:[0-9]|[1-5][0-9])$/.test(endMinuteInput.value))) // csak számok, nem kezdődik 0-val
+if(!(/^([0-5][0-9])$/.test(endMinuteInput.value))) // csak számok, nem kezdődik 0-val
     {
       hiba.push("Helytelenül megadott vég perc!");
       console.log("Regex vég perc hiba!");  
     }
-if(!(/^(?:[0-9]|[1-5][0-9])$/.test(startMinuteInput.value))) // csak számok, nem kezdődik 0-val
+if(!(/^([0-5][0-9])$/.test(startMinuteInput.value))) // csak számok, nem kezdődik 0-val
     {
       hiba.push("Helytelenül megadott kezdő perc!");
       console.log("Regex kezdő perc hiba!");  
@@ -152,8 +158,8 @@ if (hiba.length > 0) {
     let endTimeM = endHourInput.value * 60 + parseInt(endMinuteInput.value);
     let startHour = parseInt(startHourInput.value);
     let endHour = parseInt(endHourInput.value);
-    let startMinute = parseInt(startMinuteInput.value);
-    let endMinute = parseInt(endMinuteInput.value);
+    let startMinute = removeLeadingZero(parseInt(startMinuteInput.value));
+    let endMinute = removeLeadingZero(parseInt(endMinuteInput.value));
     if(endTimeM <= startTimeM){
         endTimeM += 1440;
     }
@@ -163,6 +169,10 @@ if (hiba.length > 0) {
     return {startTimeM, endTimeM, timeDiff, kezdesFormazott, befejezesFormazott, startHour, endHour, startMinute, endMinute};
 }
 };
+
+function removeLeadingZero(str) {
+  return str.startsWith('0') ? str.slice(1) : str;
+}
 
 // # region Slider kezelése
 const intensitySlider = document.getElementById("intensitySlider");
